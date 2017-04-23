@@ -11,6 +11,6 @@ function getSyncResponse(coder, challenge, test){
     async: true,
     data: data,
     success: function(a,b,c){console.log(a);console.log(b);console.log(c);},
-    error: function(a,b,c){console.log(a);console.log(b);console.log(c);}
+    error: function(a,b,c){console.log(a.responseText);console.log(b);console.log(c);}
   }); 
 }
