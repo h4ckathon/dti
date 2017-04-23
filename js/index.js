@@ -55,11 +55,13 @@ function verifyAndGenerateNewChallenge(){
     for(var i = stringSize.length-1; i>=0; i--){
       if(responseCode[i] != "R"){
         var alfabetIndex = alfabet.indexOf(challenge[i]);
-        var nextAlfabetIndex = alfabetIndex+2;
+        var nextAlfabetIndex = alfabetIndex+1;
         if(nextAlfabetIndex >= alfabet.length){
           nextAlfabetIndex = 0;
         }
+        console.log("b4", challenge[i], alfabet[nextAlfabetIndex]);
         challenge[i] = alfabet[nextAlfabetIndex];
+        console.log("after", challenge[i], alfabet[nextAlfabetIndex]);
         if(responseCode[i] == "W"){
           alfabet.splice(alfabetIndex,1);
         }
