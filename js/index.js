@@ -5,6 +5,7 @@ var alfabet;
 var challenge;
 var stringSize;
 var response;
+var responseCode;
 function solve(){
   var coder = $('#email').val();
   getSyncResponse(coder, '', true);
@@ -13,7 +14,7 @@ function solve(){
   var counter = 0;
   do{
     getSyncResponse(coder, challenge, true);
-    verifyAndGenerateNewChallenge();
+    challengeAccepted = verifyAndGenerateNewChallenge();
     counter++;
   } while(!challengeAccepted || counter > alfabet.length);
   confirm('Test for ' + coder + ' successful!\nStringSize = ' + StringSize);
@@ -25,8 +26,8 @@ function getSyncResponse(coder, challenge, test){
     url: 'https://ac-challenge.herokuapp.com/api/challenge',
     async: true,
     data: data,
-    success: function(responseCode){response = responseCode},
-    error: function(error){if(error.status == "409"){stringSize = parseInt(error.responseText)}}
+    success: function(code, msg, obj){responseCode = code.split(""); response = obj},
+    error: function(error){if(error.status == 409){stringSize = parseInt(error.responseText)}}
   }); 
 }
 
@@ -42,5 +43,21 @@ function setFirstChallenge(){
 }
 
 function verifyAndGenerateNewChallenge(){
-   
+  if(response.status == 206){
+    for(var i = stringSize.length-1; i>=0; i--){
+      var alfabetIndex = alfabet.indexOf(challenge[i]);
+      var nextAlfabetIndex = alfabetIndex+1;
+      if(nextAlfabetIndex >= alfabet.length){
+      nextAlfabetIndex = 0;
+      }
+      challenge[i] = alfabet[nextAlfabetIndex];
+      if(responseCode[i] == "W"){
+        alfabet.splice(alfabetIndex,1);
+      }
+    }
+    return false;
+  } else{
+    console.log(response);
+    return true;
+  }
 }
