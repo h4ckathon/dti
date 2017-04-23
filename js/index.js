@@ -7,7 +7,7 @@ function solve(){
 function getSyncResponse(coder, challenge, test){
   var data = {coder:coder, test:test};
   if(challenge != null && challenge != ''){
-    $.extend(data, {challenge: challenge});
+    data = $.extend({}, data, {challenge: challenge});
   }
   $.ajax({
     url: 'https://ac-challenge.herokuapp.com/api/challenge',
