@@ -53,14 +53,16 @@ function verifyAndGenerateNewChallenge(){
   console.log("challenge used: " + challenge);
   if(response.status == 206){
     for(var i = stringSize.length-1; i>=0; i--){
-      var alfabetIndex = alfabet.indexOf(challenge[i]);
-      var nextAlfabetIndex = alfabetIndex+1;
-      if(nextAlfabetIndex >= alfabet.length){
-        nextAlfabetIndex = 0;
-      }
-      challenge[i] = alfabet[nextAlfabetIndex];
-      if(responseCode[i] == "W"){
-        alfabet.splice(alfabetIndex,1);
+      if(responseCode[i] != "R"){
+        var alfabetIndex = alfabet.indexOf(challenge[i]);
+        var nextAlfabetIndex = alfabetIndex+2;
+        if(nextAlfabetIndex >= alfabet.length){
+          nextAlfabetIndex = 0;
+        }
+        challenge[i] = alfabet[nextAlfabetIndex];
+        if(responseCode[i] == "W"){
+          alfabet.splice(alfabetIndex,1);
+        }
       }
     }
     console.log("next challenge: " + challenge);
