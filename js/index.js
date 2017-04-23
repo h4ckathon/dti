@@ -5,10 +5,7 @@ function solve(){
 }
 
 function getSyncResponse(coder, challenge, test){
-  var data = {coder:coder, test:test};
-  if(challenge != null && challenge != ''){
-    data = $.extend({}, data, {challenge: challenge});
-  }
+  var data = {coder:coder, challenge:challenge, test:test};
   $.ajax({
     url: 'https://ac-challenge.herokuapp.com/api/challenge',
     async: true,
