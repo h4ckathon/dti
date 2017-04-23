@@ -1,3 +1,5 @@
+var stringSize;
+
 function solve(){
   var coder = $('#email').val();
   getSyncResponse(coder, '', true);
@@ -11,6 +13,6 @@ function getSyncResponse(coder, challenge, test){
     async: true,
     data: data,
     success: function(a,b,c){console.log(a);console.log(b);console.log(c);},
-    error: function(a,b,c){console.log(a.responseText);console.log(b);console.log(c);}
+    error: function(error){if(error.status == "409"){stringSize = parseInt(error.responseText)}}
   }); 
 }
