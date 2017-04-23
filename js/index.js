@@ -34,7 +34,7 @@ function getSyncResponse(coder, challenge, test){
 
 function setFirstChallenge(){
   alfabet = initialAlfabet.slice(0);
-  challenge = new Array(stringSize);
+  challenge = [];
   for(var i=0; i<stringSize; i++){
     var pos = i;
     if(i>=alfabet.length){
