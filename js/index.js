@@ -11,13 +11,13 @@ function solve(){
   getSyncResponse(coder, '', true);
   setFirstChallenge();
   var challengeAccepted = true;
-  var counter = 1;
+  var counter = 0;
   do{
-    console.log(counter);
+    console.log(counter+1);
     getSyncResponse(coder, challenge, true);
     challengeAccepted = verifyAndGenerateNewChallenge();
     counter++;
-  } while(!challengeAccepted && counter < initialAlfabet.length);
+  } while(!challengeAccepted && counter < initialAlfabet.length+10);
   confirm('Test for ' + coder + ' successful!');
 }
 
