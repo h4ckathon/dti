@@ -59,9 +59,7 @@ function verifyAndGenerateNewChallenge(){
         if(nextAlfabetIndex >= alfabet.length){
           nextAlfabetIndex = 0;
         }
-        console.log("b4", challenge[i], alfabet[nextAlfabetIndex]);
         challenge[i] = alfabet[nextAlfabetIndex];
-        console.log("after", challenge[i], alfabet[nextAlfabetIndex]);
         if(responseCode[i] == "W"){
           alfabet.splice(alfabetIndex,1);
         }
