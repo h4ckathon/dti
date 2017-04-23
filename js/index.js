@@ -51,8 +51,10 @@ function verifyAndGenerateNewChallenge(){
   console.log("responseStatus: " + response.status);
   console.log("responseCode: " + responseCode);
   console.log("challenge used: " + challenge);
+  console.log(response.status == 206);
   if(response.status == 206){
-    for(var i = stringSize.length-1; i>=0; i--){
+    for(var i = stringSize-1; i>=0; i--){
+      console.log(i)
       if(responseCode[i] != "R"){
         var alfabetIndex = alfabet.indexOf(challenge[i]);
         var nextAlfabetIndex = alfabetIndex+1;
