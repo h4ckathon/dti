@@ -1,119 +1,84 @@
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
-<!--
-	BASED ON Fixduty template
-http://w3layouts.com/preview/?l=/fixduty-a-corporate-business-flat-responsive-web-template/
--->
-<!--
-Redesign by Didier Laureaux
-And I have add comment in code.
--->
 <!DOCTYPE HTML>
 <html>
-<head>
-<title>Game Of Thrones - Free HTML/CSS Responsive Template</title>
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="css/swipebox.css">
-<script src="js/jquery-1.8.3.min.js"></script>
-<!------ Light Box ------>
-    <script src="js/jquery.swipebox.min.js"></script> 
-    <script type="text/javascript">
-		jQuery(function($) {
-			$(".swipebox").swipebox();
-		});
-	</script>
-    <!------ Eng Light Box ------>
+	<head>
+		<title>Hackathon AvenueCode 2017 - Game Of Thrones</title>
+		<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+		<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 
-<!---- start-smoth-scrolling---->
-<script type="text/javascript" src="js/move-top.js"></script>
-<script type="text/javascript" src="js/easing.js"></script>
- <script type="text/javascript">
-		jQuery(document).ready(function($) {
-			$(".scroll").click(function(event){		
-				event.preventDefault();
-				$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+		<script src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
+		<script src='https://cdn.backand.net/vanilla-sdk/1.1.0/backand.min.js'></script>
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+		<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/swipebox.css">
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+				});
 			});
-		});
-	</script>
-<!---End-smoth-scrolling---->
-<script src="js/responsiveslides.min.js"></script>
- <script>
-    $(function () {
-      $("#slider").responsiveSlides({
-      	auto: true,
-      	nav: true,
-      	speed: 500,
-        namespace: "callbacks",
-        pager: true,
-      });
-    });
-  </script>
-</head>
- 
-
+		</script>
+	</head>
 <body><!--Body start-->
 	<div class="header" id="head">
 		<div class="header-top">
-				<div class="container">
-			<div class="logo">
-				<a href="index.html"><img src="images/logo.png"></a><!--Put your logo here-->
+			<div class="container">
+				<div class="logo">
+					<a href="index.html"><img src="images/logo.png"></a>
+					<a href="http://hackathon.avenuecode.com/">
+						<img class="img-responsive ac-home-menu-logo hidden-xs hidden-sm" src="/images/ac-logo-horizontal-inverted.svg" alt="Logo Avenue Code">
+					</a>
 				</div>
 				<div class="top-menu">
 					<span class="menu"> </span>
 					<!--Menu-->
-				<ul>
-					<li><a href="#home" class="active" class="scroll">home</a></li>
+					<ul>
+						<li><a href="#home" class="active" class="scroll">home</a></li>
 						<li><a href="#aboutus" class="scroll">King of the North</a></li>
-						 	<li><a href="#service" class="scroll">Synopsis</a></li>
-								 <li><a href="#portfolio" class="scroll">Dead party</a></li>
-								 	<li><a href="#testimonial" class="scroll">Quotes</a></li>
-								 	 	<li><a href="#team" class="scroll">John Snow</a></li>
-									 		<li><a href="#kill-now" class="scroll">Family</a></li>
-													 <li><a href="#contact" class="scroll">contact</a></li>
-						</ul>
-						<!--End Menu-->
-					</div>
-					 <!--script-nav-->
-		 <script>
-		 $("span.menu").click(function(){
-		 $(".top-menu ul").slideToggle("slow" , function(){
-		 });
-		 });
-		 </script>
+						<li><a href="#service" class="scroll">Synopsis</a></li>
+						<li><a href="#portfolio" class="scroll">Dead party</a></li>
+						<li><a href="#testimonial" class="scroll">Quotes</a></li>
+						<li><a href="#team" class="scroll">John Snow</a></li>
+						<li><a href="#kill-now" class="scroll">Family</a></li>
+						<li><a href="#contact" class="scroll">contact</a></li>
+					</ul>
+					<!--End Menu-->
+				</div>
+		 		<!--script-nav-->
+		 		<script>
+		 			$("span.menu").click(function(){
+						$(".top-menu ul").slideToggle("slow" , function(){});
+		 			});
+		 		</script>
 				<div class="clearfix"> </div>
-					</div>
-					</div>
+			</div>
+		</div>
 
-<div class="slider"> <!--Slider Section-->
-	 <div class="container">
-		   <div class="callbacks_container">
-			  <ul class="rslides" id="slider">
-				 <li>	          
-					 <h3>“A mind needs books as a sword needs a whetstone, if it is to <span>keep its edge</span>.” </h3>
-					<p>― George R.R. Martin, A Game of Thrones</p>          
-				 </li>
-				 <li>	          
-					<h3>“<span>Winter</span> is coming.”</h3>  
-					<p>― George R.R. Martin, A Game of Thrones</p>          
-				 </li>
-				 <li>	          
-					 <h3>“Some old wounds never truly heal, and bleed again at the <span>slightest word</span>. </h3>
-					 <p>― George R.R. Martin, A Game of Thrones</p>  	          
-				 </li>
-			  </ul>
-		  </div>
-	  </div>
-</div>
-</div> <!--End Slider Section-->
+		<div class="slider"> <!--Slider Section-->
+	 		<div class="container">
+		  	<div class="callbacks_container">
+			  	<ul class="rslides" id="slider">
+				 		<li>	          
+					 		<h3>“A mind needs books as a sword needs a whetstone, if it is to <span>keep its edge</span>.” </h3>
+							<p>― George R.R. Martin, A Game of Thrones</p>          
+				 		</li>
+				 		<li>	          
+							<h3>“<span>Winter</span> is coming.”</h3>  
+							<p>― George R.R. Martin, A Game of Thrones</p>          
+				 		</li>
+				 		<li>	          
+					 		<h3>“Some old wounds never truly heal, and bleed again at the <span>slightest word</span>. </h3>
+					 		<p>― George R.R. Martin, A Game of Thrones</p>  	          
+				 		</li>
+			  	</ul>
+		  	</div>
+	  	</div>
+		</div>
+	</div> <!--End Slider Section-->
 
 
 			<div class="content"><!--Content Section-->
@@ -485,7 +450,7 @@ And I have add comment in code.
 								<div class="container">
 									
 									<div class="footer-top">
-									<p> Designed by <a href="http://w3layouts.com" target="target_blank">Didier Laureaux</a></p>
+									<p> Designed adapted from template by <a href="http://w3layouts.com" target="target_blank">Didier Laureaux</a></p>
 								</div>
 					<script type="text/javascript">
 						$(document).ready(function() {
