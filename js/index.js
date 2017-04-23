@@ -1,4 +1,4 @@
 function solve(){
   var coder = $('#email').val();
-  confirm('Test for ' + coder + ' successfull');
+  confirm('Test for ' + coder + ' successful');
 }
