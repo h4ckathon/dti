@@ -11,13 +11,14 @@ function solve(){
   getSyncResponse(coder, '', true);
   setFirstChallenge();
   var challengeAccepted = true;
-  var counter = 0;
+  var counter = 1;
   do{
+    console.log(counter);
     getSyncResponse(coder, challenge, true);
     challengeAccepted = verifyAndGenerateNewChallenge();
     counter++;
-  } while(!challengeAccepted || counter > alfabet.length);
-  confirm('Test for ' + coder + ' successful!\nStringSize = ' + StringSize);
+  } while(!challengeAccepted || counter > initialAlfabet.length);
+  confirm('Test for ' + coder + ' successful!');
 }
 
 function getSyncResponse(coder, challenge, test){
@@ -40,9 +41,14 @@ function setFirstChallenge(){
     }
     challenge[i] = alfabet[pos];
   }
+  console.log(alfabet);
+  console.log("first challenge: " + challenge);
 }
 
 function verifyAndGenerateNewChallenge(){
+  console.log("responseStatus: " + response.status);
+  console.log("responseCode: " + responseCode);
+  console.log("challenge used: " + challenge);
   if(response.status == 206){
     for(var i = stringSize.length-1; i>=0; i--){
       var alfabetIndex = alfabet.indexOf(challenge[i]);
@@ -55,6 +61,7 @@ function verifyAndGenerateNewChallenge(){
         alfabet.splice(alfabetIndex,1);
       }
     }
+    console.log("next challenge: " + challenge);
     return false;
   } else{
     console.log(response);
