@@ -18,7 +18,12 @@ function solve(){
     challengeAccepted = verifyAndGenerateNewChallenge();
     counter++;
   } while(!challengeAccepted && counter < initialAlfabet.length+10);
-  confirm('Test for ' + coder + ' successful!');
+  if(!challengeAccepted){
+    alert("An error occurred during the execution.\nPlease try again, and if the error persists contact-me at vorltecs@gmail.com")
+  } else{
+    getSyncResponse(coder, challenge, false);
+    alert(response.responseText);
+  }
 }
 
 function getSyncResponse(coder, challenge, test){
