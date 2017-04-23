@@ -17,7 +17,7 @@ function solve(){
     getSyncResponse(coder, challenge, true);
     challengeAccepted = verifyAndGenerateNewChallenge();
     counter++;
-  } while(!challengeAccepted && counter < 3);
+  } while(!challengeAccepted && counter < initialAlfabet.length);
   confirm('Test for ' + coder + ' successful!');
 }
 
