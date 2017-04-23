@@ -15,8 +15,8 @@
   <div class="container">
     <h2>Avenue Code Hackathon Solver</h2>
     <p>Type in your email</p>
-    <input type="text" name="ListItem"/>
-    <div id="button">Add</div>
+    <input type="text" name="email"/>
+    <div id="button" onclick="if(confirm('Do you really want to solve the challenge using ' + form['email'].value + '?')){solve(form['email'].value)}">Solve</div>
   </div>
 </body>
 </html>
