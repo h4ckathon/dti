@@ -15,7 +15,7 @@
     <h2>Avenue Code Hackathon Solver</h2>
     <p>Type in your email</p>
     <input type="text" name="email" id="email"/>
-    <div id="button" onclick="if(confirm('Do you really want to solve the challenge using ' + $('#email').val() + '?')){solve()}">Solve</div>
+    <div id="button" onclick="var coder = $('#email').val(); if(confirm('Do you really want to solve the challenge using `' + coder + '`?')){solve();}">Solve</div>
   </div>
 </body>
 </html>
