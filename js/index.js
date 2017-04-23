@@ -22,7 +22,7 @@ function solve(){
 }
 
 function getSyncResponse(coder, challenge, test){
-  var data = {coder:coder, challenge:challenge, test:test};
+  var data = {coder:coder, challenge:challenge.toString().replace(/,/g,""), test:test};
   $.ajax({
     url: 'https://ac-challenge.herokuapp.com/api/challenge',
     async: false,
