@@ -1,6 +1,6 @@
 function solve(){
   var coder = $('#email').val();
-  getSyncResponse(coder, null, true);
+  getSyncResponse(coder, '', true);
   confirm('Test for ' + coder + ' successful!');
 }
 
