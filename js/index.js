@@ -17,7 +17,7 @@ function solve(){
     getSyncResponse(coder, challenge, true);
     challengeAccepted = verifyAndGenerateNewChallenge();
     counter++;
-  } while(!challengeAccepted || counter > initialAlfabet.length);
+  } while(!challengeAccepted && counter < 3);
   confirm('Test for ' + coder + ' successful!');
 }
 
@@ -56,7 +56,7 @@ function verifyAndGenerateNewChallenge(){
       var alfabetIndex = alfabet.indexOf(challenge[i]);
       var nextAlfabetIndex = alfabetIndex+1;
       if(nextAlfabetIndex >= alfabet.length){
-      nextAlfabetIndex = 0;
+        nextAlfabetIndex = 0;
       }
       challenge[i] = alfabet[nextAlfabetIndex];
       if(responseCode[i] == "W"){
