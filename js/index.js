@@ -27,7 +27,7 @@ function getSyncResponse(coder, challenge, test){
     url: 'https://ac-challenge.herokuapp.com/api/challenge',
     async: false,
     data: data,
-    success: function(code, msg, obj){responseCode = code.split(""); response = obj;},
+    success: function(code, msg, obj){console.log(msg);responseCode = code.split(""); response = obj;},
     error: function(error){if(error.status == 409){stringSize = parseInt(error.responseText);}}
   }); 
 }
