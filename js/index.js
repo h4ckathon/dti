@@ -25,10 +25,10 @@ function getSyncResponse(coder, challenge, test){
   var data = {coder:coder, challenge:challenge, test:test};
   $.ajax({
     url: 'https://ac-challenge.herokuapp.com/api/challenge',
-    async: true,
+    async: false,
     data: data,
     success: function(code, msg, obj){responseCode = code.split(""); response = obj;},
-    error: function(error){if(error.status == 409){console.log(error);stringSize = parseInt(error.responseText);}}
+    error: function(error){if(error.status == 409){stringSize = parseInt(error.responseText);}}
   }); 
 }
 
