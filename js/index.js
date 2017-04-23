@@ -9,6 +9,7 @@ function getSyncResponse(coder, challenge, test){
     url: 'https://ac-challenge.herokuapp.com/api/challenge',
     async: true,
     data: {coder:coder, challenge:challenge, test:test},
-    success: function(a,b,c){console.log(a);console.log(b);console.log(c);}
+    success: function(a,b,c){console.log(a);console.log(b);console.log(c);},
+    error: function(a,b,c){console.log(a);console.log(b);console.log(c);}
   }); 
 }
