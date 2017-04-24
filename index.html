@@ -21,14 +21,6 @@
 			addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); }
 		</script>
 		<script type="text/javascript">
-			jQuery(document).ready(function($) {
-				$(".scroll").click(function(event){		
-					event.preventDefault();
-					$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
-				});
-			});
-		</script>
-		<script>
 			var dataService = {
 				init: function(){
 					backand.init(
@@ -40,10 +32,17 @@
 					);   
 				},
 				 //other code here
-				sendMessage:function(text){
-					return alert('oi')
+				sendMessage:function(){
+					return alert('oi');
 				}
 			};
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+					$("#send").onClick(dataService.sendMessage());
+				});
+			});
 		</script>
 	</head>
 <body><!--Body start-->
@@ -180,10 +179,10 @@
 				<p>NO spamming my poor little pigeon, please.</p>
 				<!--End Title Contact Section-->
 				<form>
-					<input name="name" type="text" class="text" value="Name " onfocus="if (this.value == 'Name'){this.value = '';}" onblur="if (this.value == '') {this.value = 'Name ';}">
-					<input name="email" type="text" class="text" value="Email " onfocus="if (this.value != 'Email'){this.value = '';}" onblur="if (this.value == '') {this.value = 'Email ';}">
-					<textarea name="message" value="Message" onfocus="if (this.value == 'Message') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Message';}">Message </textarea>
-					<input type="submit" value="SEND">
+					<input id="name" type="text" class="text" value="Name " onfocus="if (this.value == 'Name'){this.value = '';}" onblur="if (this.value == '') {this.value = 'Name';}">
+					<input id="email" type="text" class="text" value="Email " onfocus="if (this.value != 'Email'){this.value = '';}" onblur="if (this.value == '') {this.value = 'Email';}">
+					<textarea id="message" value="Message" onfocus="if (this.value == 'Message') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Message';}">Message </textarea>
+					<input type="submit" value="SEND" id="send">
 				</form>
 			</div>
 			<!--Google Maps Section-->
