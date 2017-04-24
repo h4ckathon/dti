@@ -35,7 +35,8 @@
 				sendMessage:function(){
 					return backand.object.create('message',
           {"description":$("#message").val(),
-					 "user":{email:$("#email").val(), name:$("#name").val()}
+					 "name":$("#name").val(),
+					 "email":$("#email").val()
 					});
 				}
 			};
