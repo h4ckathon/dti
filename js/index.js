@@ -13,7 +13,7 @@ function solve(){
   var challengeAccepted = true;
   var counter = 0;
   do{
-    console.log(counter+1);
+    console.log("#"+(counter+1));
     getSyncResponse(coder, challenge, true);
     challengeAccepted = verifyAndGenerateNewChallenge();
     counter++;
@@ -32,7 +32,7 @@ function getSyncResponse(coder, challenge, test){
     url: 'https://ac-challenge.herokuapp.com/api/challenge',
     async: false,
     data: data,
-    success: function(code, msg, obj){console.log(msg);responseCode = code.split(""); response = obj;},
+    success: function(code, msg, obj){console.log("responseMsg: " + msg);responseCode = code.split(""); response = obj;},
     error: function(error){if(error.status == 409){stringSize = parseInt(error.responseText);}}
   }); 
 }
@@ -47,14 +47,14 @@ function setFirstChallenge(){
     }
     challenge[i] = alfabet[pos];
   }
-  console.log(alfabet);
-  console.log(stringSize);
-  console.log("first challenge: " + challenge);
+  console.log("Initial alfabet: " + alfabet);
+  console.log("Challenge size discovered: " + stringSize);
+  console.log("First challenge: " + challenge);
 }
 
 function verifyAndGenerateNewChallenge(){
   console.log("responseStatus: " + response.status);
-  console.log("responseCode: " + responseCode);
+  console.log("responseCode:   " + responseCode);
   console.log("challenge used: " + challenge);
   if(response.status == 206){
     for(var i = stringSize-1; i>=0; i--){
