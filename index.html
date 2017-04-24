@@ -33,7 +33,10 @@
 				},
 				 //other code here
 				sendMessage:function(){
-					return alert('oi');
+					return backand.object.create('message',
+          {"description":$("#message").val(),
+					 "user":{email:$("#email").val(), name:$("#name").val()}
+					});
 				}
 			};
 			jQuery(document).ready(function($) {
@@ -59,7 +62,7 @@
 					<span class="menu"> </span>
 					<!--Menu-->
 					<ul>
-						<li><a href="#welcome" class="active" class="scroll">Welcome</a></li>
+						<li><a href="#welcome" class="active" class="scroll">Welcomeaa</a></li>
 						<li><a href="#aboutus" class="scroll">King of the Code</a></li>
 						<li><a href="#service" class="scroll">Challenge Solver</a></li>
 					
