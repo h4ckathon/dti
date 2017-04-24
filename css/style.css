@@ -196,18 +196,18 @@ ul.callbacks_tabs.callbacks1_tabs {
     padding:0;
 }
 .right-top h3 {
-  font-size: 2.5em;
+  font-size: 32pxem;
   color: white;
   margin-bottom: 1em;
 }
 .right-top span {
   color: #fac832;
-  font-size: 1.3em;
+  font-size: 36px;
   font-weight: 600;
 }
 .right-top {
   width: 60%;
-  margin: 0 auto 7em;
+  margin: 0 auto 12em;
 }
 p.lable1 {
   margin-top: 1.5em;
@@ -216,7 +216,7 @@ p.lable1 {
 }
 
 .right-top p {
-  font-size: 1.39em;
+  font-size:20px;
  color: #464646;
 }
 .right-bottom h4 {
