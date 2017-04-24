@@ -51,9 +51,7 @@ body{
 .logo{
 	float: left;
 }
-.logo a {
-  display: block;
-}
+
 .top-menu{
 	float: right;
 	  margin-top: 0.5em;
