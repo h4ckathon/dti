@@ -65,8 +65,8 @@ function verifyAndGenerateNewChallenge(){
           nextAlfabetIndex = 0;
         }
         challenge[i] = alfabet[nextAlfabetIndex];
-        if(responseCode[i] == "W"){
-          //alfabet.splice(alfabetIndex,1);
+        if(responseCode[i] == "W" && alfabetIndex > -1){
+          alfabet.splice(alfabetIndex,1);
         }
       }
     }
