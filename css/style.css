@@ -196,7 +196,7 @@ ul.callbacks_tabs.callbacks1_tabs {
     padding:0;
 }
 .right-top h3 {
-  font-size: 32pxem;
+  font-size: 32px;
   color: white;
   margin-bottom: 1em;
 }
@@ -463,7 +463,7 @@ div#portfoliolist {
 
 }
 .testimonial-header h3 {
-  font-size: 2.5em;
+  font-size: 32px;
   color: white;
   margin-bottom: 0.1em;
   text-transform: capitalize;
@@ -471,11 +471,11 @@ div#portfoliolist {
 }
 .testimonial-header span {
   color: #1a1a1a;
-  font-size: 1.3em;
+  font-size: 36px;
   font-weight: 600;
 }
 .testimonial-header p{
-  font-size: 1.3em;
+  font-size: 18px;
   color: white;
  }
  article > div {
@@ -559,7 +559,7 @@ div#portfoliolist {
 
 }
 .team-header h3 {
-  font-size: 2.5em;
+  font-size:32px;
   color: white;
   margin-bottom: 0.1em;
     text-transform: capitalize;
@@ -567,11 +567,11 @@ div#portfoliolist {
 }
 .team-header span {
   color: #fac832;
-  font-size: 1.3em;
+  font-size: 36px;
   font-weight: 600;
 }
 .team-header p{
-  font-size: 1.3em;
+  font-size: 20px;
   color: #464646;
  }
 .team-content p{
