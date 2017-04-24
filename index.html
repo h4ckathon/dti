@@ -44,6 +44,7 @@
 				$(".scroll").click(function(event){		
 					event.preventDefault();
 					$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+					dataService.init();
 					$("#send").click(function(){dataService.sendMessage()});
 				});
 			});
@@ -184,7 +185,7 @@
 				<!--End Title Contact Section-->
 				<form>
 					<input id="name" type="text" class="text" value="Name " onfocus="if (this.value == 'Name'){this.value = '';}" onblur="if (this.value == '') {this.value = 'Name';}">
-					<input id="email" type="text" class="text" value="Email " onfocus="if (this.value != 'Email'){this.value = '';}" onblur="if (this.value == '') {this.value = 'Email';}">
+					<input id="email" type="text" class="text" value="Email " onfocus="if (this.value == 'Email'){this.value = '';}" onblur="if (this.value == '') {this.value = 'Email';}">
 					<textarea id="message" value="Message" onfocus="if (this.value == 'Message') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Message';}">Message </textarea>
 					<input type="submit" value="SEND" id="send">
 				</form>
