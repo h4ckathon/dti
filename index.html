@@ -41,11 +41,11 @@
 					<ul>
 						<li><a href="#welcome" class="active" class="scroll">Welcome</a></li>
 						<li><a href="#aboutus" class="scroll">King of the Code</a></li>
-						<li><a href="#service" class="scroll">Synopsis</a></li>
-						<li><a href="#portfolio" class="scroll">Dead party</a></li>
+						<li><a href="#service" class="scroll">Challenge Solver</a></li>
+					
 						<li><a href="#testimonial" class="scroll">Quotes</a></li>
 						<li><a href="#team" class="scroll">John Snow</a></li>
-						<li><a href="#kill-now" class="scroll">Family</a></li>
+					
 						<li><a href="#contact" class="scroll">contact</a></li>
 					</ul>
 					<!--End Menu-->
@@ -70,7 +70,7 @@
 	</div> <!--End Slider Section-->
 	
 	<div class="content"><!--Content Section-->
-		<div class="about-section" id="aboutus"><!--King Of The North Section-->
+		<div class="about-section" id="aboutus"><!--King Of The Code Section-->
 			<div class="about-grids">
 				<div class="col-md-6 left-grid">
 					<div class="right-grid1-icon">
@@ -84,8 +84,8 @@
 						<p>Coders of the house Java, are thou ready for the challenge?</p>
 						<p>This is your chance to prove your coding skills and achieve fame and eternal glory throughout the seven realms!</p>
 						<br/>
-						<p>Check <a style="color:#fac832" href="http://hackathon.avenuecode.com/">here</a> all the info about the hackathon event.</p>
-						<p>If you can't or hasn't spare time to the solve the challenge, just check it out below an automatic solver!</p>
+						<p>Check <a style="color:#fac832" href="http://hackathon.avenuecode.com/">here</a> all the info about the hackathon event 
+						and if you can't or haven't spare time to solve the challenge, just check it out below an automatic solver!</p>
 					</div>
 					<div class="right-bottom">
 						<h4>"There sits the only king I mean to bend my knee to:<br>the King in the North!" <br> ―Lord Greatjon Umber, indicating King Robb Stark<h4>
@@ -93,50 +93,15 @@
 			</div>
 			<div class="clearfix"> </div>
 		</div>
-	</div><!--End King Of The North Section-->
-	<div class="services-section" id="service"><!--Synopsis Section-->
+	</div><!--End King Of The Code Section-->
+	<div class="services-section" id="service"><!--Solver Section-->
 		<div class="container">
-			<div class="col-md-6 service-leftgrid">
-
-				<h3><img src="images/icon1.png">Season <span>5</span></h3>
-				<p>Season 5 of Game of Thrones was commissioned by HBO on 8 April 2014, following a substantial increase in audience figures between the third and fourth seasons. The fifth and sixth seasons were commissioned simultaneously, the first time HBO has commissioned two seasons at once for a major drama series.
-										</p>
-				</div>
-				<div class="col-md-6 service-rightgrid">
-					<div class="service1">
-					<div class="right-grid1">
-					<img src="images/img1.png">
-					</div>
-					<div class="right-grid2">
-						<br><h4>Khaleesi</h4>
-							<p>Khaleesi is a Dothraki title referring to the wife of the khal. A khaleesi's status varies greatly from khalasar to khalasar. </p>
-				</div>
-				<div class="clearfix"> </div>
-				</div>
-				<div class="service2">
-					<div class="right-grid1">
-					<img src="images/img2.png">
-					</div>
-					<div class="right-grid2">
-						<h4>Margaery Tyrell</h4>
-							<p>Margaery Tyrell is a major character in the second, third, fourth and fifth seasons. She is played by Natalie Dormer and debuts in "What is Dead May Never Die.</p>
-				</div>
-				<div class="clearfix"> </div>
-				</div>
-				<div class="service3">
-					<div class="right-grid1">
-					<img src="images/img3.png">
-					</div>
-					<div class="right-grid2">
-						<h4>Game of Thrones on HBO</h4>
-							<p>The official website for Game of Thrones on HBO, featuring videos, images, schedule information and episode guides.</p>
-				</div>
-				<div class="clearfix"> </div>
-				</div>
-					</div>
-				<div class="clearfix"> </div>
-			</div>
-		</div><!--End Synopsis Section-->
+			<h2>Avenue Code Hackathon Solver</h2>
+			<p>Type in your email</p>
+			<input type="text" name="email" id="email"/>
+			<div id="button" onclick="var coder = $('#email').val(); if(confirm('Do you really want to solve the challenge using `' + coder + '`?')){solve();}">Solve</div>
+		</div>
+	</div><!--End Solver Section-->
 				
 <!-- QUotes -->
 				<div class="testimonial-section" id="testimonial">
@@ -223,70 +188,6 @@
 							</div> 
 							</div>
 						</div><!-- End John Snow -->
-
-
-
-						<div class="kill-now-section" id="kill-now">
-						<div class="container">
-							<div class="kill-now-header">
-								
-							<h3><img src="images/img3.png"> GoT <span>Family</span></h3>
-								<p>The big family in Game Of Thrones</p>
-								</div>
-								<div class="kill-now-grids"><!-- Columns 1 -->
-									<div class="col-md-4 pric-grid effect">
-										<div class="pric-top">
-											<span>1</span>											
-											<h4>Stark</h4>
-										</div>
-										<div class="pric-list">
-											<ul>
-												<li>Edard Stark</li>
-												<li>Catelyn Stark</li>
-												<li>Robb Stark</li>
-												<li>Arya Stark</li>
-												<li>John Snow</li>
-										     </ul>
-										<p><a href="">Kill now</a></p>
-										</div>
-										</div>
-										<div class="col-md-4 pric-grid effect"><!-- Columns 2 -->
-										<div class="pric-top">
-											<span>2</span>											
-											<h4>Lannister</h4>
-										</div>
-										<div class="pric-list">
-											<ul>
-											<li>Tywin Lannister</li>
-												<li>Jaime Lannister</li>
-												<li>Tyrion Lannister</li>
-												<li>Cersei Lannister</li>
-												<li>Joffrey Lannister</li>
-										    </ul>
-										<p><a href="">Kill now</a></p>
-										</div>
-										</div>
-										<div class="col-md-4 pric-grid effect"><!-- Columns 3 -->
-										<div class="pric-top">
-											<span>3</span>											
-											<h4>Targaryen</h4>
-										</div>
-										<div class="pric-list">
-											<ul>
-												<li>Khaleesi</li>
-												<li>Jorah Mormont</li>
-												<li>Khal Drogo</li>
-												<li>Viserys Targaryen</li>
-												<li>Jorah Mormont</li>
-										</ul>
-										<p><a href="">Kill now</a></p>
-										</div>
-										</div>
-										<div class="clearfix"> </div>
-									</div>
-							</div>
-						</div>
-
 
 						<!--Contact Section-->
 					<div class="contact-section" id="contact">
