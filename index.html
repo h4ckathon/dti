@@ -34,7 +34,7 @@
 				 //other code here
 				sendMessage:function(){
 					return backand.object.create('message',
-          {"description":$("#message").val(),
+         				{"description":$("#message").val(),
 					 "name":$("#name").val(),
 					 "email":$("#emailFrom").val()
 					});
@@ -44,10 +44,10 @@
 				$(".scroll").click(function(event){		
 					event.preventDefault();
 					$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
-					dataService.init();
-					$("#send").click(function(){dataService.sendMessage()});
 				});
 			});
+			dataService.init();
+			$("#send").click(function(){dataService.sendMessage()});
 		</script>
 	</head>
 <body><!--Body start-->
