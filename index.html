@@ -47,7 +47,7 @@
 				});
 			});
 			dataService.init();
-			$("#send").click(function(){dataService.sendMessage()});
+			$("#send").click(function(event){event.preventDefault();dataService.sendMessage()});
 		</script>
 	</head>
 <body><!--Body start-->
