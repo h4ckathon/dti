@@ -47,7 +47,6 @@
 				});
 			});
 			dataService.init();
-			$("#send").click(function(event){event.preventDefault();dataService.sendMessage()});
 		</script>
 	</head>
 <body><!--Body start-->
@@ -187,7 +186,7 @@
 					<input id="name" type="text" class="text" value="Name " onfocus="if (this.value == 'Name '){this.value = '';}" onblur="if (this.value == '') {this.value = 'Name ';}">
 					<input id="emailFrom" type="text" class="text" value="Email " onfocus="if (this.value == 'Email '){this.value = '';}" onblur="if (this.value == '') {this.value = 'Email ';}">
 					<textarea id="message" value="Message " onfocus="if (this.value == 'Message ') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Message ';}">Message </textarea>
-					<input type="submit" value="SEND" id="send">
+					<input type="submit" value="SEND" id="send" onclick="dataService.sendMessage()">
 				</form>
 			</div>
 			<!--Google Maps Section-->
