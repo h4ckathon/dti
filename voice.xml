@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Response>
-    <Say voice="alice">Thanks for trying our documentation. Enjoy!</Say>
     <Play>https://github.com/h4ckathon/AvenueCode/blob/master/gemidao.mp3</Play>
 </Response>
