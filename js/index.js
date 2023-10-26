@@ -2,7 +2,9 @@ function solve(){
   var question = $('#question').val();
   var language = $('#language').val();
   var code = $('#code').val();
-
+console.log(question);
+	console.log(language);
+	console.log(code);
 const data = JSON.stringify({
 	language: '${language}',
 	stdin: 'alou bill ',
