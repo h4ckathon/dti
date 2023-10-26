@@ -33,8 +33,9 @@ function sendData(){
 	
 	xhr.addEventListener('readystatechange', function (question) {
 		if (this.readyState === this.DONE) {
+			console.log(question)
 			console.log("Teste #"+ ++numberOfQuestions + "'" +  question['input'] + "'")
-			a = this;
+			a[numberOfQuestions] = this;
 			console.log( JSON.parse(this.responseText).stdin);
 			console.log(JSON.parse(this.responseText).stdin.response === question['response'])
 		}
