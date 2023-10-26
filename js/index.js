@@ -31,7 +31,7 @@ function sendData(){
 	let xhr = new XMLHttpRequest();
 	xhr.withCredentials = true;
 	
-	xhr.addEventListener('readystatechange', function (data) {
+	xhr.addEventListener('readystatechange', function (question) {
 		if (this.readyState === this.DONE) {
 			console.log("Teste #"+ ++numberOfQuestions + "'" +  question['input'] + "'")
 			a = this;
