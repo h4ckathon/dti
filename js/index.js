@@ -1,14 +1,13 @@
 function solve(){
   var coder = $('#email').val();
+
 const data = JSON.stringify({
 	language: 'python',
 	stdin: 'Peter',
 	files: [
 		{
 			name: 'index.py',
-			content: 'import sys
-name = sys.stdin.readline()
-print(\'Hello \'+ name)'
+			content: 'import sys\nname = sys.stdin.readline()\nprint(\'Hello \'+ name)'
 		}
 	]
 });
@@ -28,6 +27,8 @@ xhr.setRequestHeader('X-RapidAPI-Key', '216af59996mshb83318e70b90962p18bd1fjsnfe
 xhr.setRequestHeader('X-RapidAPI-Host', 'onecompiler-apis.p.rapidapi.com');
 
 xhr.send(data);
+
+	
 alert("done, ${coder}")
   
 }
