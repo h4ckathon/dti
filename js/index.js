@@ -23,11 +23,11 @@ var questions = {"1":
 function solve(){
 	numberOfQuestions = 0;
 	for (let question of questions[$('#question').val()]) {
-		sendData();
+		sendData(question);
 	}
 }
 
-function sendData(){
+function sendData(question){
 	const data = getData(question);
 	let xhr = new XMLHttpRequest();
 	xhr.withCredentials = true;
