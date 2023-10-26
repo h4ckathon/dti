@@ -34,9 +34,7 @@ function sendData(){
 		if (this.readyState === this.DONE) {
 			console.log("Teste #"+ ++numberOfQuestions + "'" +  question['input'] + "'")
 			console.log( JSON.parse(this.responseText).stdin);
-			if(JSON.parse(this.responseText).stdin.response === question['response']){
-				numberOfSuccess++
-			}
+			console.log(JSON.parse(this.responseText).stdin.response === question['response'])
 		}
 	});
 	
