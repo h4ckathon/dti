@@ -31,16 +31,16 @@ function sendData(question){
 	xhr.addEventListener('readystatechange', function () {
 		if (this.readyState === this.DONE) {
 			var question;
-			let stdin = JSON.parse(this.responseText).stdin;
+			let response = JSON.parse(this.responseText);
 			a[numberOfQuestions] = this;
-			console.log("Teste #"+ ++numberOfQuestions + "'" +  stdin.input + "'")
+			console.log("Teste #"+ ++numberOfQuestions + "'" +  response.stdin + "'")
 			for (question of questions[$('#question').val()]) {
-				if(question['input'] === stdin.input) {
+				if(question['input'] === response.stdin) {
 					break;
 				}
 			}
-			console.log(stdin.response+ " === " +question['response'])
-			console.log(stdin.response === question['response'])
+			console.log(response.stdout + " === " +question['response'])
+			console.log(response.stdout  === question['response'])
 		}
 	});
 	
