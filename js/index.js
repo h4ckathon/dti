@@ -1,5 +1,6 @@
 var numberOfQuestions = 0;
 var numberOfSuccess = 0;
+var a;
 var questions = {"1":
      [{
       "input":  "alou bill",
@@ -33,6 +34,7 @@ function sendData(){
 	xhr.addEventListener('readystatechange', function (data) {
 		if (this.readyState === this.DONE) {
 			console.log("Teste #"+ ++numberOfQuestions + "'" +  question['input'] + "'")
+			a = this.responseText;
 			console.log( JSON.parse(this.responseText).stdin);
 			console.log(JSON.parse(this.responseText).stdin.response === question['response'])
 		}
