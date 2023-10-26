@@ -1,7 +1,7 @@
 function solve(){
-  var question = $('#question').value;
-  var language = $('#language').value;
-  var code = $('#code').value;
+  var question = $('#question');
+  var language = $('#language');
+  var code = $('#code');
 console.log(question);
 	console.log(language);
 	console.log(code);
