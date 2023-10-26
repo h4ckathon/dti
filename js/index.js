@@ -17,29 +17,21 @@ var questions = {"1":
 }
 
 function solve(){
+	NumberOfQuestions = 0;
+	for (let question of questions[$('#question').val()]) {
+		sendData();
+	}
+}
 
-for (let question of questions[$('#question').val()]) {
+function sendData(){
 	const data = getData(question);
-	console.log(data)
-	sendData(data);
-	
-}
-
-
-
-
-	
-
-  
-}
-
-function sendData(data){
 	let xhr = new XMLHttpRequest();
 	xhr.withCredentials = true;
 	
-	xhr.addEventListener('readystatechange', function () {
+	xhr.addEventListener('readystatechange', function (data) {
 		if (this.readyState === this.DONE) {
-			console.log(this.responseText);
+			console.log("resposta")
+			console.log( JSON.parse(this.responseText));
 		}
 	});
 	
@@ -49,7 +41,6 @@ function sendData(data){
 	xhr.setRequestHeader('X-RapidAPI-Host', 'onecompiler-apis.p.rapidapi.com');
 
 	xhr.send(data);
-	console.log(xhr);
 }
 
 function getData(question){
