@@ -18,7 +18,7 @@ var questions = {"1":
 
 function solve(){
 
-for (let question of a[$('#question').val()]) {
+for (let question of questions[$('#question').val()]) {
 	const data = getData(question);
 	console.log(data)
 	sendData(data);
