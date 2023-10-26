@@ -43,7 +43,7 @@ function sendData(question){
 					break;
 				}
 			}
-			console.log(response.stdout + " === " +question['response'] + " => " + response.stdout  === question['response'])
+			console.log(response.stdout + " === " +question['response'] + " => " + (response.stdout  === question['response']));
 		}
 	});
 	
