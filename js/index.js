@@ -1,6 +1,7 @@
 var numberOfQuestions = 0;
 var numberOfSuccess = 0;
 var a = [];
+var b = [];
 var questions = {"1":
      [{
       "input":  "alou bill",
@@ -47,6 +48,7 @@ function sendData(){
 	xhr.setRequestHeader('X-RapidAPI-Host', 'onecompiler-apis.p.rapidapi.com');
 
 	xhr.send(data);
+	b[numberOfQuestions] = xhr;
 }
 
 function getData(question){
