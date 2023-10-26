@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>Hackathon AvenueCode 2017 - Game Of Thrones</title>
+		<title>Hackathon dti 2023 - Game Of Thrones</title>
 		<link rel="stylesheet" href="css/customStyle.css">
 		<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
 		<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
@@ -19,34 +19,7 @@
 		<script type="application/x-javascript">
 			addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); }
 		</script>
-		<script type="text/javascript">
-			var dataService = {
-				init: function(){
-					backand.init(
-						{appName: 'avenuecode',
-						 signUpToken: '3f91c894-c719-4dba-a4b9-3018e673c052',
-						 anonymousToken: '4f8331c8-9e61-47bf-8544-448eaafae2ac',
-						 runSocket: false
-						}
-					);   
-				},
-				 //other code here
-				sendMessage:function(){
-					return backand.object.create('message',
-         				{"description":$("#message").val(),
-					 "name":$("#name").val(),
-					 "email":$("#emailFrom").val()
-					});
-				}
-			};
-			jQuery(document).ready(function($) {
-				$(".scroll").click(function(event){		
-					event.preventDefault();
-					$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
-				});
-			});
-			dataService.init();
-		</script>
+		
 	</head>
 <body><!--Body start-->
 	<div class="header" id="head">
@@ -119,10 +92,12 @@
 	</div><!--End King Of The Code Section-->
 	<div class="services-section" id="service"><!--Solver Section-->
 		<div class="container" style="color:cornsilk; text-align: center; font-size: 18px;">
-			<h1>Avenue Code Hackathon Solver</h1><br/>
-			<p style="padding-right: 70px;">Type in your email</p>
-			<input type="text" name="email" id="email" style="color:darkgoldenrod"/>
-			<div id="button" onclick="var coder = $('#email').val(); if(confirm('Do you really want to solve the challenge using `' + coder + '`?')){solve();}">Solve</div>
+			<h1>dti Hackathon Solver</h1><br/>
+			<p style="padding-right: 70px;">Question #</p>
+			<input type="number" name="question" id="question" style="color:darkgoldenrod"/>
+			<p style="padding-right: 70px;">Code</p>
+			<input type="text" name="code" id="code" style="color:darkgoldenrod"/>
+			<div id="button" onclick="solve();">Solve</div>
 		</div>
 	</div><!--End Solver Section-->
 				
