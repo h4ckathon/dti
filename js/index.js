@@ -33,7 +33,7 @@ for (let question of questions[$('#question').val()]) {
   
 }
 
-function sendData(){
+function sendData(data){
 	let xhr = new XMLHttpRequest();
 	xhr.withCredentials = true;
 	
