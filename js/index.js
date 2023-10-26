@@ -1,10 +1,10 @@
 function solve(){
-  var question = $('#question').value;
-  var language = $('#language').value;
-  var code = $('#code').value;
-console.log(question);
-	console.log(language);
-	console.log(code);
+  var question = $('#question');
+  var language = $('#language');
+  var code = $('#code');
+console.log(question.value);
+	console.log(language.value);
+	console.log(code.value);
 const data = JSON.stringify({
 	'language': language.value,
 	'stdin': 'alou bill ',
