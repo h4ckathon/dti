@@ -1,3 +1,5 @@
+var numberOfQuestions = 0;
+var numberOfSuccess = 0;
 var questions = {"1":
      [{
       "input":  "alou bill",
@@ -17,7 +19,7 @@ var questions = {"1":
 }
 
 function solve(){
-	NumberOfQuestions = 0;
+	numberOfQuestions = 0;
 	for (let question of questions[$('#question').val()]) {
 		sendData();
 	}
@@ -30,7 +32,7 @@ function sendData(){
 	
 	xhr.addEventListener('readystatechange', function (data) {
 		if (this.readyState === this.DONE) {
-			console.log("resposta")
+			console.log("Teste #"+ ++numberOfQuestions + "'" +  question.input + "'")
 			console.log( JSON.parse(this.responseText));
 		}
 	});
