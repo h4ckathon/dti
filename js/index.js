@@ -40,6 +40,7 @@ function sendData(question){
 					break;
 				}
 			}
+			console.log(stdin.response+ " === " +question['response'])
 			console.log(stdin.response === question['response'])
 		}
 	});
