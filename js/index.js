@@ -1,19 +1,12 @@
 function solve(){
-  let question = $('#question');
-  let language = $('#language');
-  let code = $('#code');
-	console.log($('#question'));
-	console.log($('#question').val());
-console.log(question.value);
-	console.log(language.value);
-	console.log(code.value);
+
 const data = JSON.stringify({
-	'language': language.value,
+	'language': $('#language').val(),
 	'stdin': 'alou bill ',
 	'files': [
 		{
 			name: 'index.js',
-			content: code.value
+			content: $('#code').val()
 		}
 	]
 });
