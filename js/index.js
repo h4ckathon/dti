@@ -56,7 +56,7 @@ function sendData(question){
 function getData(question){
 	return JSON.stringify({
 		'language': $('#language').val(),
-		'stdin': question,
+		'stdin': question['input'],
 		'files': [
 			{
 				name: 'index.js',
