@@ -1,7 +1,5 @@
 var numberOfQuestions = 0;
 var numberOfSuccess = 0;
-var a = [];
-var b = [];
 var questions = {"1":
      [{
       "input":  "alou bill",
@@ -32,13 +30,17 @@ function sendData(question){
 	let xhr = new XMLHttpRequest();
 	xhr.withCredentials = true;
 	
-	xhr.addEventListener('readystatechange', function (question) {
+	xhr.addEventListener('readystatechange', function () {
 		if (this.readyState === this.DONE) {
-			console.log(question)
-			console.log("Teste #"+ ++numberOfQuestions + "'" +  question['input'] + "'")
-			a[numberOfQuestions] = this;
-			console.log( JSON.parse(this.responseText).stdin);
-			console.log(JSON.parse(this.responseText).stdin.response === question['response'])
+			var question;
+			let stdin = JSON.parse(this.responseText).stdin;
+			console.log("Teste #"+ ++numberOfQuestions + "'" +  stdin.input + "'")
+			for (question of questions[$('#question').val()]) {
+				if(question['input'] === stdin.input) {
+					break;
+				}
+			}
+			console.log(stdin.response === question['response'])
 		}
 	});
 	
@@ -48,7 +50,6 @@ function sendData(question){
 	xhr.setRequestHeader('X-RapidAPI-Host', 'onecompiler-apis.p.rapidapi.com');
 
 	xhr.send(data);
-	b[numberOfQuestions] = xhr;
 }
 
 function getData(question){
