@@ -1,6 +1,6 @@
 var numberOfQuestions = 0;
 var numberOfSuccess = 0;
-var a;
+var a = [];
 var questions = {"1":
      [{
       "input":  "alou bill",
