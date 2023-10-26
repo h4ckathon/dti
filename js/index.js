@@ -1,3 +1,21 @@
+var questions = {"1":
+     [{
+      "input":  "alou bill",
+      "response": "4"
+      }, {
+      "input":  " ",
+      "response": "0"
+      }],
+"2":
+     [{
+      "input":  "19",
+      "response": "true"
+      }, {
+      "input":  "14",
+      "response": "false"
+      }]
+}
+
 function solve(){
 
 const data = JSON.stringify({
