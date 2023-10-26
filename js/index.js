@@ -1,17 +1,19 @@
 function solve(){
-  var coder = $('#email').val();
+  var question = $('#question').val();
+  var language = $('#language').val();
+  var code = $('#code').val();
 
 const data = JSON.stringify({
-	language: 'python',
-	stdin: 'Peter',
+	language: '${language}',
+	stdin: 'alou bill ',
 	files: [
 		{
-			name: 'index.py',
-			content: 'import sys\nname = sys.stdin.readline()\nprint(\'Hello \'+ name)'
+			name: 'index.js',
+			content: '${code}'
 		}
 	]
 });
-
+console.log(data);
 const xhr = new XMLHttpRequest();
 xhr.withCredentials = true;
 
@@ -26,7 +28,7 @@ xhr.setRequestHeader('content-type', 'application/json');
 xhr.setRequestHeader('X-RapidAPI-Key', '216af59996mshb83318e70b90962p18bd1fjsnfe56b4d521df');
 xhr.setRequestHeader('X-RapidAPI-Host', 'onecompiler-apis.p.rapidapi.com');
 
-xhr.send(data);
+
 
 	
 alert("done, ${coder}")
