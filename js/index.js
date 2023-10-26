@@ -1,12 +1,10 @@
 var numberOfQuestions = 0;
 var numberOfSuccess = 0;
+var a = [];
 var questions = {"1":
      [{
       "input":  "alou bill ",
       "response": "4"
-      }, {
-      "input":  " ",
-      "response": "0"
       }],
 "2":
      [{
@@ -34,6 +32,7 @@ function sendData(question){
 		if (this.readyState === this.DONE) {
 			var question;
 			let stdin = JSON.parse(this.responseText).stdin;
+			a[numberOfQuestions] = this;
 			console.log("Teste #"+ ++numberOfQuestions + "'" +  stdin.input + "'")
 			for (question of questions[$('#question').val()]) {
 				if(question['input'] === stdin.input) {
