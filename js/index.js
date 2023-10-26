@@ -17,6 +17,6 @@ function solve(){
 $.ajax(settings).done(function (response) {
 	console.log(response);
 });
-alert("done!")
+alert("done, ${coder}")
   
 }
