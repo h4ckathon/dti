@@ -1,4 +1,4 @@
-import questions from './questions.json' assert {type: 'json'};
+import questions from 'js/questions.json' assert {type: 'json'};
 
 var numberOfQuestions = 0;
 var numberOfSuccess = 0;
