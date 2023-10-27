@@ -1,10 +1,11 @@
 {"1":
      [{
-      "input":  "alou bill",
-      "response": "4"
-      }, {
+      "input":  "alou bill ",
+      "response": "4\n"
+      },
+      {
       "input":  " ",
-      "response": "0"
+      "response": "0\n"
       }],
 "2":
      [{
