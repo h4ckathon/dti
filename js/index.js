@@ -1,24 +1,7 @@
 var numberOfQuestions = 0;
 var numberOfSuccess = 0;
 var a = [];
-var questions2 = {"1":
-     [{
-      "input":  "alou bill ",
-      "response": "4\n"
-      },
-      {
-      "input":  " ",
-      "response": "0\n"
-      }],
-"2":
-     [{
-      "input":  "19",
-      "response": "true"
-      }, {
-      "input":  "14",
-      "response": "false"
-      }]
-}
+
 var questions;
 
 $.ajax({
