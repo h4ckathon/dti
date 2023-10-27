@@ -1,7 +1,9 @@
+import questions from './questions.json' assert {type: 'json'};
+
 var numberOfQuestions = 0;
 var numberOfSuccess = 0;
 var a = [];
-var questions = {"1":
+var questions2 = {"1":
      [{
       "input":  "alou bill ",
       "response": "4\n"
