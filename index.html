@@ -91,14 +91,29 @@
 	</div><!--End King Of The Code Section-->
 	<div class="services-section" id="service"><!--Validation Section-->
 		<div class="container" style="color:cornsilk; text-align: center; font-size: 18px;">
-			<h1>dti Hackathon Validation</h1><br/>
-			<p style="padding-right: 70px;">Question #</p>
-			<input type="number" name="question" id="question" style="color:darkgoldenrod" value="1"/>
-			<p style="padding-right: 70px;">Choosen Language</p>
-			<input type="text" name="language" id="language" style="color:darkgoldenrod" value="javascript"/>
-			<p style="padding-right: 70px;">Code</p>
-			<textarea rows="10" cols="50" name="code" id="code" style="color:darkgoldenrod"></textarea>
-			<div id="button" onclick="validate();">Validate</div>
+			<h1>dti Hackathon Validation</h1><br>
+			<div class="row">			
+				<div class="col-sm-3"></div>
+				<div class="col-sm-2">
+					<p style="" class="">Question #</p>
+					<input type="number" name="question" id="question" style="/* size:10px; */color:darkgoldenrod;width: 150px;" value="1">
+				</div>
+				<div class="col-sm-4">
+			    	<p style="" class="">Choosen Language</p>
+					<input type="text" name="language" id="language" style="width: 345px;color:darkgoldenrod" value="javascript">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-3"></div>
+			    <div class="col-sm-6">
+					<p style="float: left;padding-left: 10px;margin-top: 20px;">Code</p>
+					<textarea rows="10" cols="54" name="code" id="code" style="color:darkgoldenrod"></textarea>
+			    </div>	
+			</div>
+			<div class="row">
+			    <div class="col-sm-4"></div> 
+				<div id="button" onclick="validate();" style="">Validate</div>
+			</div>
 		</div>
 	</div><!--End Validation Section-->
 				
