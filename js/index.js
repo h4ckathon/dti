@@ -14,7 +14,7 @@ $.ajax({
 
 
 
-function solve(){
+function validate(){
 	numberOfQuestions = 0;
 	for (let question of questions[$('#question').val()]) {
 		sendData(question);
