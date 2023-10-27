@@ -1,5 +1,3 @@
-import questions from './questions.json' assert {type: 'json'};
-
 var numberOfQuestions = 0;
 var numberOfSuccess = 0;
 var a = [];
@@ -21,6 +19,17 @@ var questions2 = {"1":
       "response": "false"
       }]
 }
+var questions;
+
+$.ajax({
+    url: "https://raw.githubusercontent.com/h4ckathon/dti/master/js/questions.json",
+    dataType: "json"
+  }).done(function(result) {
+    questions = result
+  });
+
+
+
 
 function solve(){
 	numberOfQuestions = 0;
