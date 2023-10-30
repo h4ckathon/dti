@@ -7,7 +7,7 @@ var questions;
 window.onmessage = function (e) {
     if (e.data && e.data.language) {
 	console.log(e.data)
-	document.getElementById('parent-code-capture').value = JSON.stringify(e.data, null, 2);
+	console.log( JSON.stringify(e.data, null, 2));
     }
 };
 
