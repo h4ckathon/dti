@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>Hackathon dti 2023 - Game Of Thrones</title>
+		<title>Hackathon dti 2023</title>
 		<link rel="stylesheet" href="css/customStyle.css">
 		<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
 		<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
@@ -21,77 +21,15 @@
 		
 	</head>
 <body><!--Body start-->
-	<div class="header" id="head">
-		<div class="header-top">
-			<div class="container">
-				<div class="logo">
-					<a href="http://hackathon.avenuecode.com/">
-						<img src="https://aadcdn.msftauthimages.net/dbd5a2dd-wjqqrrwmtto-g9ual8pso0fub8judjzxbbzhdwit0-m/logintenantbranding/0/bannerlogo?ts=637293120189180104" alt="Logo Avenue Code" height="40px">
-					</a>
-					<a href="index.html"><img src="images/logo.png"></a>
-				</div>
-				<div class="top-menu">
-					<span class="menu"> </span>
-					<!--Menu-->
-					<ul>
-						<li><a href="#welcome" class="active" class="scroll">Welcome</a></li>
-						<li><a href="#aboutus" class="scroll">King of the Code</a></li>
-						<li><a href="#service" class="scroll">Challenge Validation</a></li>
-					
-						<li><a href="#testimonial" class="scroll">Validation Log(WIP)</a></li>
-						<li><a href="#team" class="scroll">About me</a></li>
-					
-						<li><a href="#contact" class="scroll">contact</a></li>
-					</ul>
-					<!--End Menu-->
-				</div>
-		 		<!--script-nav-->
-		 		<script>
-		 			$("span.menu").click(function(){
-						$(".top-menu ul").slideToggle("slow" , function(){});
-		 			});
-		 		</script>
-				<div class="clearfix"> </div>
-			</div>
-		</div>
-		
-		<div class="container" style="color:#fff;font-size:32px;text-align:center">
-			<h3 style="font-size:44px;text-align:left">Be welcome, <span style="color:#fac832">foreigner!</span></h3><br>
-			<p style="">In here thou shall find the path to the Hackathon... </p>
-			<br>
-			<h3>“A mind needs books as a sword needs a whetstone, if it is to  <span style="color:#fac832">keep its edge</span>.” </h3>
-			<p style="font-size:24px;">― George R.R. Martin, A Game of Thrones</p>          
-		</div>
-	</div> <!--End Slider Section-->
-	
-	<div class="content"><!--Content Section-->
-		<div class="about-section" id="aboutus"><!--King Of The Code Section-->
-			<div class="about-grids">
-				<div class="col-md-6 left-grid">
-					<div class="right-grid1-icon">
-						<img src="images/icon.png"> <!--Put your Central Icon HERE-->
-					</div>
-					<img src="images/pic1.gif"/><!--Put your Right Image HERE-->
-				</div>
-				<div class="col-md-6 right-grid">
-					<div class="right-top">
-						<h3>King of the <span>Code</span></h3>
-						<p>Coders of the house Java, are thou ready for the challenge?</p>
-						<p>This is your chance to prove your coding skills and achieve fame and eternal glory throughout the seven kingdoms!</p>
-						<br/>
-						<p>Check <a style="color:#fac832" href="https://github.com/dtidigitalcrafters/hackathonDti/blob/feature/novas-questoes/README.md">here</a> all the info about the hackathon event! 
-						</p>
-					</div>
-					<div class="right-bottom">
-						<h4>"There sits the only king I mean to bend my knee to:<br>the King in the North!" <br> ―Lord Greatjon Umber, indicating King Robb Stark<h4>
-					</div>
-			</div>
-			<div class="clearfix"> </div>
-		</div>
-	</div><!--End King Of The Code Section-->
 	<div class="services-section" id="service"><!--Validation Section-->
 		<div class="container" style="color:cornsilk; text-align: center; font-size: 18px;">
 			<h1>dti Hackathon Validation</h1><br>
+			<iframe
+			 frameBorder="0"
+			 height="450px"  
+			 src="https://onecompiler.com/embed/" 
+			 width="100%"
+			 ></iframe>
 			<div class="row">			
 				<div class="col-sm-3"></div>
 				<div class="col-sm-2">
@@ -139,63 +77,6 @@
 					<div class="clearfix"> </div>
 	      </div>
 			</div>
-		</div>
-	</div>
-	<div class="team-section" id="team"><!-- About me -->
-		<div class="container">
-			<div class="team-header">
-				<h3><img src="images/icon1.png"> About <span>Me</span></h3>
-				<p>Hello, i'm John Snow, of house Java, protector of the JVM, catcher of the try and King Coder of the North.</p>
-			</div>
-			<div class="team-grids">
-				<div class="col-md-4 team-grid">
-					<img src="images/t1.jpg">
-				</div>
-				<div class="team-grids">
-					<div class="col-md-8 team-grid">
-						<div class="team-content">
-							<h4>John Snow</h4><br><br><br><br>
-							<h3>Java/JavaScript developer</h3><h2>In Belo Horizonte</h2>
-							<br>
-						</div>
-					</div>
-				</div>
-				<div class="clearfix"> </div>
-			</div> 
-		</div>
-	</div><!-- End About me -->
-	<!--Contact Section-->
-	<div class="contact-section" id="contact">
-		<div class="contact-grids">
-			<div class="col-md-6 contact-leftgrid">
-				<!--Title Contact Section-->
-				<h3><img src="images/54029-200.png"> Send me a <span>Pigeon</span></h3>
-				<p>NO spamming my poor little pigeon, please.</p>
-				<!--End Title Contact Section-->
-				<form>
-					<input id="name" type="text" class="text" value="Name " onfocus="if (this.value == 'Name '){this.value = '';}" onblur="if (this.value == '') {this.value = 'Name ';}">
-					<input id="emailFrom" type="text" class="text" value="Email " onfocus="if (this.value == 'Email '){this.value = '';}" onblur="if (this.value == '') {this.value = 'Email ';}">
-					<textarea id="message" value="Message " onfocus="if (this.value == 'Message ') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Message ';}">Message </textarea>
-					<input type="submit" value="SEND" id="send" onclick="dataService.sendMessage()">
-				</form>
-			</div>
-			<!--Google Maps Section-->
-			<div class="col-md-6 contact-rightgrid">
-				<div class="google-map">
-					<img src="images/map.jpg"> </img>
-				</div>
-				</div>
-				<div class="clearfix"></div>
-			</div>
-		</div>
-	</div>
-	</div> <!--End Contact Section-->
-	<div class="footer-section">
-		<div class="container">
-			<div class="footer-top">
-				<p> Designed adapted from <a href="http://w3layouts.com" target="target_blank">W3Layouts</a></p>
-			</div>
-			<a class="scroll" href="#head" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 		</div>
 	</div>
 </body>
