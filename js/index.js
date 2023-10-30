@@ -4,6 +4,14 @@ var a = [];
 
 var questions;
 
+window.onmessage = function (e) {
+    if (e.data && e.data.language) {
+	console.log(e.data)
+	document.getElementById('parent-code-capture').value = JSON.stringify(e.data, null, 2);
+    }
+};
+
+        
 $.ajax({
     url: "https://raw.githubusercontent.com/h4ckathon/dti/master/js/questions.json",
     dataType: "json"
