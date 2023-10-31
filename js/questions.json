@@ -1,18 +1,57 @@
-{"1":
-     [{
-      "input":  "s = \"bora bill \"",
-      "response": "4\n"
-      },
-      {
-      "input":  "s = \" \"",
-      "response": "0\n"
-      }],
-"2":
-     [{
-      "input":  "19",
-      "response": "true"
-      }, {
-      "input":  "14",
-      "response": "false"
-      }]
+{
+     "1": [{
+           "input":  "s = \"bora bill \"",
+           "response": "4\n"
+           },
+           {
+           "input":  "s = \" \"",
+           "response": "0\n"
+           }],
+     "2": [{
+           "input":  "19",
+           "response": "true\n"
+           }, {
+           "input":  "14",
+           "response": "false\n"
+           }],
+     "7": [{
+           "input":  "alvo = 7, nums = [2,3,1,2,4,3]",
+           "response": "2\n"
+           }, {
+           "input":  "alvo = 4, nums = [1,4,4]",
+           "response": "1\n"
+           }, {
+           "input":  "alvo = 11, nums = [1,1,1,1,1,1,1,1]",
+           "response": "0\n"
+           }],
+     "8": [{
+           "input":  "nVotosPorCandidato = [2, 3, 5, 2], k = 3",
+           "response": "2\n"
+           }, {
+           "input":  "nVotosPorCandidato = [1, 2, 10, 3], k = 10",
+           "response": "4\n"
+           }, {
+           "input":  "nVotosPorCandidato = [0, 1, 1], k = 1",
+           "response": "2\n"
+           }],
+     "9": [{
+           "input":  "a = \"11\", b = \"1\"",
+           "response": "100\n"
+           }, {
+           "input":  "a = \"1010\", b = \"1011\"",
+           "response": "10101\n"
+           }, {
+           "input":  "a = "1010101", b = "0101010"",
+           "response": "1111111\n"
+           }],
+     "10": [{
+           "input":  "n = 5",
+           "response": "[ 3, 2, 2 ]\n"
+           }, {
+           "input":  "n = 16",
+           "response": "[ 15, 5, 1 ]\n"
+           }, {
+           "input":  "n = 6",
+           "response": "[ 6, 3, 0 ]\n"
+           }]
 }
