@@ -2,12 +2,11 @@ var numberOfQuestions = 0;
 var numberOfSuccess = 0;
 var a = [];
 
-var questions;
+var questions, data;
 
 window.onmessage = function (e) {
     if (e.data && e.data.language) {
-	console.log(e.data)
-	console.log( JSON.stringify(e.data, null, 2));
+	data = e.data; 
     }
 };
 
@@ -18,9 +17,6 @@ $.ajax({
   }).done(function(result) {
     questions = result
   });
-
-
-
 
 function validate(){
 	numberOfQuestions = 0;
@@ -58,7 +54,11 @@ function sendData(question){
 }
 
 function getData(question){
-	return JSON.stringify({
+	data.stdin = question['input'];
+	console.log(data);
+	return JSON.stringify(data, null, 2)
+	/*
+ 	return JSON.stringify({
 		'language': $('#language').val(),
 		'stdin': question['input'],
 		'files': [
@@ -68,4 +68,5 @@ function getData(question){
 			}
 		]
 	});
+ 	*/
 }
