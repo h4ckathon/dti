@@ -8,6 +8,7 @@
 	window.onmessage = function (e) {
 	    if (e.data && e.data.language) {
 		data = e.data; 
+		console.log(data);
 	    }
 	};
 	
