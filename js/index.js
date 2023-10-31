@@ -27,7 +27,7 @@
 				</div>
 			</article>`
 	
-	var code;
+	var questions, code;
 	
 	window.onmessage = function (e) {
 	    if (e.data && e.data.language) {
@@ -40,13 +40,13 @@
 	$.ajax({
 	    url: "https://raw.githubusercontent.com/h4ckathon/dti/master/js/questions.json",
 	    dataType: "json"
-	  }).done(function(data) {
-	    localStorage.setItem('questions', data);
+	  }).done(function(result) {
+	    questions = result
 	  });
 	
 	function validate(){
-		let questions = localStorage.getItem('questions')[$('#question').val()];
-		for (let question of questions) {
+		numberOfQuestions = 0;
+		for (let question of questions[$('#question').val()]) {
 			sendData(question);
 		}
 	}
@@ -74,9 +74,7 @@
 	function getResponse() {
 		if (this.readyState === this.DONE) {
 			let question, n=$('#question').val(), i=1;
-			let questions = localStorage.getItem('questions')[n];
 			let response = JSON.parse(this.responseText);
-			
 			for (question of questions[n]) {
 				if(question['input'] === response.stdin) {
 					break;
@@ -86,6 +84,8 @@
 			let r = localStorage.getItem(n);
 			if(r == null){
 				r = [];
+			} else {
+				r = JSON.parse(r);
 			}
 			r[i] = {
 				'input' : response.stdin, 
@@ -93,7 +93,7 @@
 				'result' : ((response.stdout  === question['response']) ? 'Success' : 'Failed'),
 				'timestamp' : Date.now()
 			};
-			localStorage.setItem.set(n, r);
+			localStorage.setItem.set(n, JSON.stringify(r));
 			console.log(results);
 			console.log("Teste #" + n + "'" +  response.stdin + "'");
 			console.log(response.stdout + " === " +question['response'] + " => " + (response.stdout  === question['response']));
