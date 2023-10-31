@@ -93,8 +93,7 @@
 				'result' : ((response.stdout  === question['response']) ? 'Success' : 'Failed'),
 				'timestamp' : Date.now()
 			};
-			localStorage.setItem.set(n, JSON.stringify(r));
-			console.log(results);
+			localStorage.setItem(n, JSON.stringify(r));
 			console.log("Teste #" + n + "'" +  response.stdin + "'");
 			console.log(response.stdout + " === " +question['response'] + " => " + (response.stdout  === question['response']));
 		}
