@@ -28,7 +28,6 @@
 			</article>`
 	
 	var questions, code;
-	var results = new Map();
 	
 	window.onmessage = function (e) {
 	    if (e.data && e.data.language) {
@@ -82,12 +81,17 @@
 				}
 				i++;
 			}
-			let r = results.get(n);
+			let r = localStorage.getItem(n);
 			if(r == null){
 				r = [];
 			}
-			r[i] = {'input' : response.stdin, 'output' : response.output, 'result' : ((response.stdout  === question['response']) ? 'Success' : 'Failed') };
-			results.set(n, r);
+			r[i] = {
+				'input' : response.stdin, 
+				'output' : response.stdout, 
+				'result' : ((response.stdout  === question['response']) ? 'Success' : 'Failed'),
+				'timestamp' : Date.now()
+			};
+			localStorage.setItem.set(n, r);
 			console.log(results);
 			console.log("Teste #" + n + "'" +  response.stdin + "'");
 			console.log(response.stdout + " === " +question['response'] + " => " + (response.stdout  === question['response']));
