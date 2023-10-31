@@ -1,10 +1,10 @@
 {"1":
      [{
-      "input":  "alou bill ",
+      "input":  "s = 'alou bill '",
       "response": "4\n"
       },
       {
-      "input":  " ",
+      "input":  "s = ' '",
       "response": "0\n"
       }],
 "2":
