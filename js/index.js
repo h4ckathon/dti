@@ -1,7 +1,7 @@
 {
 	var article = `<article style='position: relative; width: 100%; opacity: 1;'> 
 				<div class='slide-text'>
-					<h4>[${q}]</h4>
+					<h4>[{q}]</h4>
 					<div class='container'>
 						<div class='row'>
 							<div class='col-sm-4'>Input</div>
@@ -9,19 +9,19 @@
 						    	<div class='col-sm-3'>Result</div>
 						</div>
       						<div class='row'>
-							<div class='col-sm-4'>${input1}</div>
-							<div class='col-sm-3'>${output1}</div>
-							<div class='col-sm-3'>${result1}</div>
+							<div class='col-sm-4'>{input1}</div>
+							<div class='col-sm-3'>{output1}</div>
+							<div class='col-sm-3'>{result1}</div>
 						</div>
 						<div class='row'>
-							<div class='col-sm-4'>${input2}</div>
-							<div class='col-sm-3'>${output2}</div>
-							<div class='col-sm-3'>${result2}</div>
+							<div class='col-sm-4'>{input2}</div>
+							<div class='col-sm-3'>{output2}</div>
+							<div class='col-sm-3'>{result2}</div>
 					   	</div>
 						<div class='row'>
-							<div class='col-sm-4'>${input3}</div>
-							<div class='col-sm-3'>${output3}</div>
-							<div class='col-sm-3'>${result3}</div>
+							<div class='col-sm-4'>{input3}</div>
+							<div class='col-sm-3'>{output3}</div>
+							<div class='col-sm-3'>{result3}</div>
 					   	</div>
 					</div>
 				</div>
