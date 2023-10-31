@@ -27,7 +27,7 @@
 				</div>
 			</article>`
 	
-	var questions, code;
+	var code;
 	
 	window.onmessage = function (e) {
 	    if (e.data && e.data.language) {
@@ -40,13 +40,13 @@
 	$.ajax({
 	    url: "https://raw.githubusercontent.com/h4ckathon/dti/master/js/questions.json",
 	    dataType: "json"
-	  }).done(function(result) {
-	    questions = result
+	  }).done(function(data) {
+	    localStorage.setItem('questions', data);
 	  });
 	
 	function validate(){
-		numberOfQuestions = 0;
-		for (let question of questions[$('#question').val()]) {
+		let questions = localStorage.getItem('questions')[$('#question').val()];
+		for (let question of questions) {
 			sendData(question);
 		}
 	}
@@ -74,7 +74,9 @@
 	function getResponse() {
 		if (this.readyState === this.DONE) {
 			let question, n=$('#question').val(), i=1;
+			let questions = localStorage.getItem('questions')[n];
 			let response = JSON.parse(this.responseText);
+			
 			for (question of questions[n]) {
 				if(question['input'] === response.stdin) {
 					break;
