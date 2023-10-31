@@ -1,18 +1,18 @@
-{"1":
+{'1':
      [{
-      "input":  s = 'alou bill '",
-      "response": "4\n"
+      'input':  's = "bora bill "',
+      'response': '4\n'
       },
       {
-      "input":  "s = ' '",
-      "response": "0\n"
+      'input':  's = " "',
+      'response': '0\n'
       }],
-"2":
+'2':
      [{
-      "input":  "19",
-      "response": "true"
+      'input':  '19',
+      'response': 'true'
       }, {
-      "input":  "14",
-      "response": "false"
+      'input':  '14',
+      'response': 'false'
       }]
 }
