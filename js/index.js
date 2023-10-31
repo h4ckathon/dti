@@ -28,7 +28,7 @@
 			</article>`
 	
 	var questions, code;
-	const results = new Map();
+	var results = new Map();
 	
 	window.onmessage = function (e) {
 	    if (e.data && e.data.language) {
@@ -74,16 +74,22 @@
 
 	function getResponse() {
 		if (this.readyState === this.DONE) {
-			let question;
+			let question, n=$('#question').val(), i=1;
 			let response = JSON.parse(this.responseText);
-			for (question of questions[$('#question').val()]) {
+			for (question of questions[n]) {
 				if(question['input'] === response.stdin) {
 					break;
 				}
+				i++;
 			}
-
-			console.log(question);
-			console.log("Teste #" + "'" +  response.stdin + "'");
+			let r = results.get(n);
+			if(r == null){
+				r = [];
+			}
+			r[i] = {'input' : response.stdin, 'output' : response.output, 'result' : ((response.stdout  === question['response']) ? 'Success' : 'Failed') };
+			results.set(n, r);
+			console.log(results);
+			console.log("Teste #" + n + "'" +  response.stdin + "'");
 			console.log(response.stdout + " === " +question['response'] + " => " + (response.stdout  === question['response']));
 		}
 	}
