@@ -1,7 +1,7 @@
 {
 	var article = `<article style='position: relative; width: 100%; opacity: 1;'> 
 				<div class='slide-text'>
-					<h4>[{q}]</h4>
+					<h4>[Question {q}]</h4>
 					<div class='container'>
 						<div class='row'>
 							<div class='col-sm-4'>Input</div>
