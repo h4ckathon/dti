@@ -25,6 +25,46 @@
            "input":  "n = 6",
            "response": "false\n"
            }],
+     "3": [{
+           "input":  "dividendo = 10 e divisor = 3",
+           "response": "3\n"
+           }, {
+           "input":  "dividendo = 12 e divisor = 6",
+           "response": "2\n"
+           }, {
+           "input":  "dividendo = 7 e divisor = 4",
+           "response": "1\n"
+           }],
+     "4": [{
+           "input":  "nums = [2,7,11,15], target = 9",
+           "response": "0 e 1\n"
+           }, {
+           "input":  "nums = [3,4,2], alvo = 6",
+           "response": "1 e 2\n"
+           }, {
+           "input":  "nums = [4,3,15,2,20,5,19,8], alvo = 10",
+           "response": "3 e 7\n"
+           }],
+     "5": [{
+           "input":  "s = \"(())([]{}[])\"",
+           "response": "true\n"
+           }, {
+           "input":  "s = \"()([]{])\"",
+           "response": "false\n"
+           }, {
+           "input":  "s = \"()([]]])\"",
+           "response": "false\n"
+           }],
+     "6": [{
+           "input":  "t = \"abcde(fgh)\"",
+           "response": "\"abcde(hgf)\"\n"
+           }, {
+           "input":  "t = \"(abcd)\"",
+           "response": "\"(dcba)\"\n"
+           }, {
+           "input":  "t = \"abcdefgh()\"",
+           "response": "\"abcdefgh()\"\n"
+           }],
      "7": [{
            "input":  "alvo = 7, nums = [2,3,1,2,4,3]",
            "response": "2\n"
