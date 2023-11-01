@@ -9,11 +9,11 @@
            },
            {
            "input":  "s = \"Ele é o Super-Homem\"",
-           "response": 11\n"
+           "response": "11\n"
            },
            {
            "input":  "s = \"  \"",
-           "response": 0\n"
+           "response": "0\n"
            } ],
      "2": [{
            "input":  "n = 19",
