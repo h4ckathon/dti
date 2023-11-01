@@ -1,17 +1,28 @@
 {
      "1": [{
-           "input":  "s = \"bora bill \"",
+           "input":  "s = \"Olá mundo\"",
+           "response": "5\n"
+           },
+           {
+           "input":  "s = \"  Bora     Bill   \"",
            "response": "4\n"
            },
            {
-           "input":  "s = \" \"",
-           "response": "0\n"
-           }],
+           "input":  "s = \"Ele é o Super-Homem\"",
+           "response": 11\n"
+           },
+           {
+           "input":  "s = \"  \"",
+           "response": 0\n"
+           } ],
      "2": [{
-           "input":  "19",
+           "input":  "n = 19",
            "response": "true\n"
            }, {
-           "input":  "14",
+           "input":  "n = 14",
+           "response": "false\n"
+           }, {
+           "input":  "n = 6",
            "response": "false\n"
            }],
      "7": [{
