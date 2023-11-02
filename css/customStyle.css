@@ -26,3 +26,9 @@ opacity: .8;
     padding: 1px;
     margin: 5px;
 }
+
+.row-body .row {
+    border-bottom: 1px solid black;
+    margin: auto;
+    padding: 10px 0;
+}
