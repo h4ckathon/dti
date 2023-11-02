@@ -110,7 +110,7 @@
 
 	const resetQuestionInfo = (questionNumber) => {	
 		if($(`#table${questionNumber}`).get(0))
-			$(`#table${questionNumber}`).empty()
+			$(`#table${questionNumber}`).remove()
 	}
 
 	const addTable = (questionNumber) => {	
