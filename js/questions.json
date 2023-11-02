@@ -57,13 +57,13 @@
            }],
      "6": [{
            "input":  "t = \"abcde(fgh)\"",
-           "response": "\"abcde(hgf)\"\n"
+           "response": "abcde(hgf)\n"
            }, {
            "input":  "t = \"(abcd)\"",
-           "response": "\"(dcba)\"\n"
+           "response": "(dcba)\n"
            }, {
            "input":  "t = \"abcdefgh()\"",
-           "response": "\"abcdefgh()\"\n"
+           "response": "abcdefgh()\n"
            }],
      "7": [{
            "input":  "alvo = 7, nums = [2,3,1,2,4,3]",
