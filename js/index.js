@@ -7,7 +7,7 @@
 							<div class='col-sm-4'>Input</div>
 							<div class='col-sm-4'>Output</div>
 						    	<div class='col-sm-2'>Result</div>
-						    	<div class='col-sm-2'>Time</div>
+						    	<div class='col-sm-2'>DateTime</div>
 						</div>
       						<div id='table${q}' class='row-body'>
 	    					</div>
