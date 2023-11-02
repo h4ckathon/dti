@@ -59,7 +59,7 @@
 		
 		xhr.open('POST', 'https://onecompiler-apis.p.rapidapi.com/api/v1/run');
 		xhr.setRequestHeader('content-type', 'application/json');
-		xhr.setRequestHeader('X-RapidAPI-Key', $('#api').val());
+		xhr.setRequestHeader('X-RapidAPI-Key', '216af59996mshb83318e70b90962p18bd1fjsnfe56b4d521df');
 		xhr.setRequestHeader('X-RapidAPI-Host', 'onecompiler-apis.p.rapidapi.com');
 	
 		xhr.send(data);
