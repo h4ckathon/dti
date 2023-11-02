@@ -228,7 +228,7 @@ p.lable1 {
 
 }
 .services-section {
-  background: url("../images/banner1.jpg") no-repeat;
+  background: url("../images/bg-blue-top-right.jpg") no-repeat;
   background-size: cover;
   min-height: 500px;
   padding: 9em 0;
@@ -453,7 +453,7 @@ div#portfoliolist {
 /*-- portfolio--*/
 
 .testimonial-section {
-  background: #fac832;
+  background: darkcyan;
   padding: 7em 0;
 
 }
