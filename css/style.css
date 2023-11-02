@@ -509,7 +509,7 @@ div#portfoliolist {
 	left: 40px;
 }
 .wmuSliderPrev, .wmuSliderNext {
-	position: fixed;
+	position: absolute;
 	width:29px;
 	height:50px;
 	text-indent: -9999px;
@@ -524,11 +524,11 @@ div#portfoliolist {
 }
 .wmuSliderPrev {
 	background-position: 0px 0px;
-	left: 300px;
+	left: 0px;
 }
 .wmuSliderNext {
 	background-position: -22px 0px;
-	right:300px;
+	right: 0px;
 }
 .client-main{
 	padding: 1.5em 0;
