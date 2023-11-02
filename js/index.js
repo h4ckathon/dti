@@ -2,13 +2,13 @@
 	var article = (q) =>  `<article style='position: relative; width: 100%; opacity: 1;'> 
 				<div class='slide-text'>
 					<h4>[Question ${q}]</h4>
-					<div class='container'>
-						<div class='row'>
+					<div class='container-fluid'>
+						<div class='row row-header'>
 							<div class='col-sm-4'>Input</div>
-							<div class='col-sm-3'>Output</div>
-						    	<div class='col-sm-3'>Result</div>
+							<div class='col-sm-4'>Output</div>
+						    	<div class='col-sm-4'>Result</div>
 						</div>
-      						<div id='table${q}'>
+      						<div id='table${q}' class='row-body'>
 	    					</div>
 					</div>
 				</div>
