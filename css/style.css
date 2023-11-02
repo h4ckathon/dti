@@ -540,12 +540,11 @@ div#portfoliolist {
 }
 .slide-text h4 {
 	color: #fff;
-	font-size: 2.5em;
+	font-size: 2.1em;
 	letter-spacing:1px;
 	text-align:center;
 	line-height: 1.2em;
-	font-weight: 400;
-	font-style: italic;
+	font-weight: bold;
 }
 .slide-text img {
   margin: 32px auto;
