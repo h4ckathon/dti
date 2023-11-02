@@ -102,7 +102,8 @@
 			addTable(n)
 
 			addRow(response, question, n)
-
+			
+			$( ".wmuSlider a" ).remove()
 			$('.results').wmuSlider()
 		}
 	}
