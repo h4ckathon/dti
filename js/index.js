@@ -7,6 +7,7 @@
 							<div class='col-sm-4'>Input</div>
 							<div class='col-sm-4'>Output</div>
 						    	<div class='col-sm-4'>Result</div>
+						    	<div class='col-sm-4'>Time</div>
 						</div>
       						<div id='table${q}' class='row-body'>
 	    					</div>
@@ -14,11 +15,12 @@
 				</div>
 			</article>`
 
-	const row = (input, output, result) => `
+	const row = (input, output, result, date) => `
 		<div class='row'>
 			<div class='col-sm-4'>${input}</div>
-			<div class='col-sm-3'>${output}</div>
-			<div class='col-sm-3'>${result}</div>
+			<div class='col-sm-4'>${output}</div>
+			<div class='col-sm-4'>${result}</div>
+			<div class='col-sm-4'>${date}</div>
 		</div>
 	`
 	
@@ -84,17 +86,19 @@
 			}
 
 			let r = localStorage.getItem(n);
+			let dateStr = new Date().toLocaleTimeString();
+			
 			if(r == null){
 				r = [];
 			} else {
 				r = JSON.parse(r);
 			}
-
+			
 			r[i] = {
 				'input' : response.stdin, 
 				'output' : response.stdout, 
 				'result' : ((response.stdout  === question['response']) ? 'Success' : 'Failed'),
-				'timestamp' : Date.now()
+				'timestamp' : dateStr
 			};
 
 			localStorage.setItem(n, JSON.stringify(r));
@@ -102,7 +106,7 @@
 			console.log(response.stdout + " === " +question['response'] + " => " + (response.stdout  === question['response']));
 
 			addTable(n)
-			addRow(response, question, n)
+			addRow(response, question, dateStr, n)
 			resetSlider()
 		}
 	}
@@ -127,8 +131,8 @@
 		}
 	}
 
-	const addRow = (response, question, questionNumber) => {
-		const newRow = row(response.stdin, response.stdout, response.stdout  === question['response'] ? 'Success' : 'Failed')
+	const addRow = (response, question, date, questionNumber) => {
+		const newRow = row(response.stdin, response.stdout, response.stdout  === question['response'] ? 'Success' : 'Failed', date)
 
 		$(`#table${questionNumber}`).append( newRow )
 	}
