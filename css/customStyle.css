@@ -1,4 +1,4 @@
-iframe html{ 
+iframe *{ 
   overflow: hidden;
 }
 
@@ -14,4 +14,15 @@ padding: 5px 15px;
 
 #button:hover{
 cursor: pointer;
-opacity: .8;}
+opacity: .8;
+}
+
+.row-header {
+    font-weight: bold;
+    background-color: rgb(109 100 65);
+    color: fff;
+    font-size: 1.5em;
+    letter-spacing: 1px;
+    padding: 1px;
+    margin: 5px;
+}
