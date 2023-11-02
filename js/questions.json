@@ -136,12 +136,12 @@
            }],
       "13": [{
            "input": "3",
-           "response": "\"III\"\n"
+           "response": "III\n"
            }, {
            "input":  "58",
-           "response": "\"LVIII\"\n"
+           "response": "LVIII\n"
            }, {
            "input":  "1994",
-           "response": "\"MCMXCIV\"\n"
+           "response": "MCMXCIV\n"
            }]
 }
