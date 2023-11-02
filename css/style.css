@@ -486,7 +486,7 @@ div#portfoliolist {
 	overflow: hidden;
 	text-align: center;
 	min-height: 156px;
-	height: auto;
+	height: auto !important;
 }
 .wmuSlider .wmuSliderWrapper article {
 	position: relative;
