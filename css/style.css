@@ -514,7 +514,7 @@ div#portfoliolist {
 	height:50px;
 	text-indent: -9999px;
 	background: url(../images/arrows1.png) no-repeat;
-	top: 63%;
+	top: 20px;
 	z-index: 2;
 	cursor: pointer;
 	-webkit-transition: all 0.3s ease;
