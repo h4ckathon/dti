@@ -6,8 +6,8 @@
 						<div class='row row-header'>
 							<div class='col-sm-4'>Input</div>
 							<div class='col-sm-4'>Output</div>
-						    	<div class='col-sm-4'>Result</div>
-						    	<div class='col-sm-4'>Time</div>
+						    	<div class='col-sm-2'>Result</div>
+						    	<div class='col-sm-2'>Time</div>
 						</div>
       						<div id='table${q}' class='row-body'>
 	    					</div>
@@ -19,8 +19,8 @@
 		<div class='row'>
 			<div class='col-sm-4'>${input}</div>
 			<div class='col-sm-4'>${output}</div>
-			<div class='col-sm-4'>${result}</div>
-			<div class='col-sm-4'>${date}</div>
+			<div class='col-sm-2'>${result}</div>
+			<div class='col-sm-2'>${date}</div>
 		</div>
 	`
 	
