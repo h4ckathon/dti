@@ -2,18 +2,20 @@
 	var article = (q) =>  `<article style='position: relative; width: 100%; opacity: 1;'> 
 				<div class='slide-text'>
 					<h4>[Question ${q}]</h4>
-					<div class='container' id='table${q}'>
+					<div class='container'>
 						<div class='row'>
 							<div class='col-sm-4'>Input</div>
 							<div class='col-sm-3'>Output</div>
 						    	<div class='col-sm-3'>Result</div>
 						</div>
+      						<div id='table${q}'>
+	    					</div>
 					</div>
 				</div>
 			</article>`
 
 	const row = (input, output, result) => `
-		<div class='row' id='myelement'>
+		<div class='row'>
 			<div class='col-sm-4'>${input}</div>
 			<div class='col-sm-3'>${output}</div>
 			<div class='col-sm-3'>${result}</div>
@@ -100,17 +102,19 @@
 			console.log(response.stdout + " === " +question['response'] + " => " + (response.stdout  === question['response']));
 
 			addTable(n)
-
 			addRow(response, question, n)
-			
-			$( ".wmuSlider a" ).remove()
-			$('.results').wmuSlider()
+			resetSlider()
 		}
 	}
-
+	
+	const resetSlider = () => {
+		$( ".wmuSlider a" ).remove()
+		$('.results').wmuSlider()
+	}
+	
 	const resetQuestionInfo = (questionNumber) => {	
 		if($(`#table${questionNumber}`).get(0))
-			$(`#table${questionNumber}`).remove()
+			$(`#table${questionNumber}`).empty()
 	}
 
 	const addTable = (questionNumber) => {	
