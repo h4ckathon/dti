@@ -29,7 +29,7 @@
            "input":  "dividendo = 10; divisor = 3",
            "response": "3"
            }, {
-           "input":  "dividendo = 12;e divisor = 6",
+           "input":  "dividendo = 12; divisor = 6",
            "response": "2"
            }, {
            "input":  "dividendo = 7; divisor = 4",
