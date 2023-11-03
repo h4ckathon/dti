@@ -80,7 +80,7 @@
 	  });
 	
 	function resetLanguage() {
-		document.getElementById("#code_editor").contentWindow.postMessage(code.language, "*")
+		document.getElementById("code_editor").contentWindow.postMessage(languages.get(code.language), "*")
 	}
 	
 	function validate(){
