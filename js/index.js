@@ -5,11 +5,10 @@
 	window.onload = function(){
 		console.log(localStorage);
 		for(i=1; i<=13; i++){
-			let r = localStorage.getItem(i);
-			if(r){
-				addTable(i)
-				addRow(r.response, question, dateStr, n)
-				resetSlider()
+			let result = localStorage.getItem(i);
+			if(result){
+				r = JSON.parse(r);
+				console.log(r)
 			}
 		}
 	}
