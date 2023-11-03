@@ -107,15 +107,13 @@
 			
 			r[i] = {
 				'input' : response.stdin, 
-				'output' : response.stdout, 
-				'result' : ((response.stdout  === question['response']) ? 'Success' : 'Failed'),
+				'output' : response.stdout.replace(/\n/,""), 
+				'result' : ((response.stdout.replace(/\n/,"")  === question['response']) ? 'Success' : 'Failed'),
 				'timestamp' : dateStr
 			};
 
 			localStorage.setItem(n, JSON.stringify(r));
-			console.log("Teste #" + n + "'" +  response.stdin + "'");
-			console.log(response.stdout + " === " +question['response'] + " => " + (response.stdout  === question['response']));
-
+			
 			addTable(n)
 			addRow(response, question, dateStr, n)
 			resetSlider()
@@ -143,7 +141,7 @@
 	}
 
 	const addRow = (response, question, date, questionNumber) => {
-		const newRow = row(response.stdin, response.stdout, response.stdout  === question['response'] ? 'Success' : 'Failed', date)
+		const newRow = row(response.stdin, response.stdout.replace(/\n/,""), response.stdout.replace(/\n/,"")  === question['response'] ? 'Success' : 'Failed', date)
 
 		$(`#table${questionNumber}`).append( newRow )
 	}
