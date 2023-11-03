@@ -1,4 +1,43 @@
 {
+	var questions, code;
+	var languages = new Map();
+	
+	window.onload = function(){
+		document.getElementById("code_editor").contentWindow.postMessage(languages.get("javascript"), "*");
+		for(i=1; i<=13; i++){
+			let results = localStorage.getItem(i);
+			if(results){
+				addTable(i);
+				results = JSON.parse(results);
+				for(r in results){
+					if(results[r]){
+						addRow(i, results[r].input, results[r].output, results[r].result, results[r].timestamp)
+					}
+				}
+				resetSlider();
+			}
+		}
+	}
+	
+	window.onmessage = function (e) {
+	    if (e.data && e.data.language) {
+		code = e.data; 
+		console.log(code);
+	    }
+	};
+	
+	$.ajax({
+	    url: "https://raw.githubusercontent.com/h4ckathon/dti/master/js/questions.json",
+	    dataType: "json"
+	  }).done(function(result) {
+	    questions = result
+	  });
+
+	$.getScript("./js/languages/javascript.js", () => {languages.set('javascript', javascript)});
+	$.getScript("./js/languages/java.js", () => {languages.set('java', java)});
+	$.getScript("./js/languages/csharp.js", () => {languages.set('csharp', csharp)});
+	$.getScript("./js/languages/python.js", () => {languages.set('python', python)});
+	
 	var article = (q) =>  `<article style='position: relative; width: 100%; opacity: 1;'> 
 				<div class='slide-text'>
 					<h4>[Question ${q}]</h4>
@@ -24,22 +63,12 @@
 		</div>
 	`
 	
-	var questions, code;
 	
-	window.onmessage = function (e) {
-	    if (e.data && e.data.language) {
-		code = e.data; 
-		console.log(code);
-	    }
-	};
 	
-	        
-	$.ajax({
-	    url: "https://raw.githubusercontent.com/h4ckathon/dti/master/js/questions.json",
-	    dataType: "json"
-	  }).done(function(result) {
-	    questions = result
-	  });
+	function resetLanguage(language) {
+		if(confirm('The current code will be lost. Do you wnat to continue?'))
+			document.getElementById("code_editor").contentWindow.postMessage(languages.get(language), "*")
+	}
 	
 	function validate(){
 		numberOfQuestions = 0;
@@ -96,17 +125,15 @@
 			
 			r[i] = {
 				'input' : response.stdin, 
-				'output' : response.stdout, 
-				'result' : ((response.stdout  === question['response']) ? 'Success' : 'Failed'),
+				'output' : response.stdout.replace(/\n/,""), 
+				'result' : ((response.stdout.replace(/\n/,"")  === question['response']) ? 'Success' : 'Failed'),
 				'timestamp' : dateStr
 			};
 
 			localStorage.setItem(n, JSON.stringify(r));
-			console.log("Teste #" + n + "'" +  response.stdin + "'");
-			console.log(response.stdout + " === " +question['response'] + " => " + (response.stdout  === question['response']));
-
+			
 			addTable(n)
-			addRow(response, question, dateStr, n)
+			addRow(n, r[i].input, r[i].output, r[i].result, r[i].timestamp)
 			resetSlider()
 		}
 	}
@@ -131,8 +158,8 @@
 		}
 	}
 
-	const addRow = (response, question, date, questionNumber) => {
-		const newRow = row(response.stdin, response.stdout, response.stdout  === question['response'] ? 'Success' : 'Failed', date)
+	const addRow = (questionNumber, stdin, stdout, result, date) => {
+		const newRow = row(stdin, stdout, result, date)
 
 		$(`#table${questionNumber}`).append( newRow )
 	}
