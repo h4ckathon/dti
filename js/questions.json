@@ -1,147 +1,147 @@
 {
      "1": [{
            "input":  "s = \"Olá mundo\"",
-           "response": "5\n"
+           "response": "5"
            },
            {
            "input":  "s = \"  Bora     Bill   \"",
-           "response": "4\n"
+           "response": "4"
            },
            {
            "input":  "s = \"Ele é o Super-Homem\"",
-           "response": "11\n"
+           "response": "11"
            },
            {
            "input":  "s = \"  \"",
-           "response": "0\n"
+           "response": "0"
            } ],
      "2": [{
            "input":  "n = 19",
-           "response": "true\n"
+           "response": "true"
            }, {
            "input":  "n = 14",
-           "response": "false\n"
+           "response": "false"
            }, {
            "input":  "n = 6",
-           "response": "false\n"
+           "response": "false"
            }],
      "3": [{
-           "input":  "dividendo = 10 e divisor = 3",
-           "response": "3\n"
+           "input":  "dividendo = 10; divisor = 3",
+           "response": "3"
            }, {
-           "input":  "dividendo = 12 e divisor = 6",
-           "response": "2\n"
+           "input":  "dividendo = 12;e divisor = 6",
+           "response": "2"
            }, {
-           "input":  "dividendo = 7 e divisor = 4",
-           "response": "1\n"
+           "input":  "dividendo = 7; divisor = 4",
+           "response": "1"
            }],
      "4": [{
-           "input":  "nums = [2,7,11,15], target = 9",
-           "response": "0 e 1\n"
+           "input":  "nums = [2,7,11,15]; target = 9",
+           "response": "0 e 1"
            }, {
-           "input":  "nums = [3,4,2], target = 6",
-           "response": "1 e 2\n"
+           "input":  "nums = [3,4,2]; target = 6",
+           "response": "1 e 2"
            }, {
-           "input":  "nums = [4,3,15,2,20,5,19,8], target = 10",
-           "response": "3 e 7\n"
+           "input":  "nums = [4,3,15,2,20,5,19,8]; target = 10",
+           "response": "3 e 7"
            }],
      "5": [{
            "input":  "s = \"(())([]{}[])\"",
-           "response": "true\n"
+           "response": "true"
            }, {
            "input":  "s = \"()([]{])\"",
-           "response": "false\n"
+           "response": "false"
            }, {
            "input":  "s = \"()([]]])\"",
-           "response": "false\n"
+           "response": "false"
            }],
      "6": [{
            "input":  "t = \"abcde(fgh)\"",
-           "response": "abcde(hgf)\n"
+           "response": "abcde(hgf)"
            }, {
            "input":  "t = \"(abcd)\"",
-           "response": "(dcba)\n"
+           "response": "(dcba)"
            }, {
            "input":  "t = \"abcdefgh()\"",
-           "response": "abcdefgh()\n"
+           "response": "abcdefgh()"
            }],
      "7": [{
-           "input":  "alvo = 7, nums = [2,3,1,2,4,3]",
-           "response": "2\n"
+           "input":  "alvo = 7; nums = [2,3,1,2,4,3]",
+           "response": "2"
            }, {
-           "input":  "alvo = 4, nums = [1,4,4]",
-           "response": "1\n"
+           "input":  "alvo = 4; nums = [1,4,4]",
+           "response": "1"
            }, {
-           "input":  "alvo = 11, nums = [1,1,1,1,1,1,1,1]",
-           "response": "0\n"
+           "input":  "alvo = 11; nums = [1,1,1,1,1,1,1,1]",
+           "response": "0"
            }],
      "8": [{
-           "input":  "nVotosPorCandidato = [2, 3, 5, 2], k = 3",
-           "response": "2\n"
+           "input":  "nVotosPorCandidato = [2, 3, 5, 2]; k = 3",
+           "response": "2"
            }, {
-           "input":  "nVotosPorCandidato = [1, 2, 10, 3], k = 10",
-           "response": "4\n"
+           "input":  "nVotosPorCandidato = [1, 2, 10, 3]; k = 10",
+           "response": "4"
            }, {
-           "input":  "nVotosPorCandidato = [0, 1, 1], k = 1",
-           "response": "2\n"
+           "input":  "nVotosPorCandidato = [0, 1, 1]; k = 1",
+           "response": "2"
            }],
      "9": [{
-           "input":  "a = \"11\", b = \"1\"",
-           "response": "100\n"
+           "input":  "a = \"11\"; b = \"1\"",
+           "response": "100"
            }, {
-           "input":  "a = \"1010\", b = \"1011\"",
-           "response": "10101\n"
+           "input":  "a = \"1010\"; b = \"1011\"",
+           "response": "10101"
            }, {
-           "input":  "a = \"1010101\", b = \"0101010\"",
-           "response": "1111111\n"
+           "input":  "a = \"1010101\"; b = \"0101010\"",
+           "response": "1111111"
            }],
      "10": [{
            "input":  "n = 5",
-           "response": "[ 3, 2, 2 ]\n"
+           "response": "[ 3, 2, 2 ]"
            }, {
            "input":  "n = 16",
-           "response": "[ 15, 5, 1 ]\n"
+           "response": "[ 15, 5, 1 ]"
            }, {
            "input":  "n = 6",
-           "response": "[ 6, 3, 0 ]\n"
+           "response": "[ 6, 3, 0 ]"
            }],
      "11": [{
            "input":  "n = 9",
-           "response": "2\n"
+           "response": "2"
            }, {
            "input":  "n = 8",
-           "response": "0\n"
+           "response": "0"
            }, {
            "input":  "n = 15",
-           "response": "3\n"
+           "response": "3"
            }, {
            "input":  "n = 10",
-           "response": "2\n"
+           "response": "2"
            }, {
            "input":  "n = 7",
-           "response": "0\n"
+           "response": "0"
            }],
       "12": [{
            "input":  "[1,2,3]",
-           "response": "[[1], [2], [3], [1,2], [1,3], [2,3], [1,2,3]]\n"
+           "response": "[[1], [2], [3], [1,2], [1,3], [2,3], [1,2,3]]"
            }, {
            "input":  "[4, 5]",
-           "response": "[[4], [5], [4, 5]]\n"
+           "response": "[[4], [5], [4, 5]]"
            }, {
            "input":  "[1, 2, 3, 4]",
-           "response": "[ [1], [2], [3], [4], [1, 2], [1, 3], [1, 4], [2, 3], [2, 4], [3, 4], [1, 2, 3], [1, 2, 4], [1, 3, 4], [2, 3, 4], [1, 2, 3, 4]]\n"
+           "response": "[ [1], [2], [3], [4], [1, 2], [1, 3], [1, 4], [2, 3], [2, 4], [3, 4], [1, 2, 3], [1, 2, 4], [1, 3, 4], [2, 3, 4], [1, 2, 3, 4]]"
            }, {
            "input":  "[1]",
-           "response": "[[1]]\n"
+           "response": "[[1]]"
            }],
       "13": [{
            "input": "3",
-           "response": "III\n"
+           "response": "III"
            }, {
            "input":  "58",
-           "response": "LVIII\n"
+           "response": "LVIII"
            }, {
            "input":  "1994",
-           "response": "MCMXCIV\n"
+           "response": "MCMXCIV"
            }]
 }
