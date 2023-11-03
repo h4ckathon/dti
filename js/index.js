@@ -1,4 +1,8 @@
 {
+
+	window.onload = function(){
+		console.log(localStorage)
+	}
 	var languages = new Map();
 	$.getScript("./js/languages/javascript.js", () => {languages.set('javascript', javascript)});
 	$.getScript("./js/languages/java.js", () => {languages.set('java', java)});
