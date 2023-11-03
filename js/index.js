@@ -79,8 +79,8 @@
 	    questions = result
 	  });
 	
-	function resetLanguage() {
-		document.getElementById("code_editor").contentWindow.postMessage(languages.get(code.language), "*")
+	function resetLanguage(language) {
+		document.getElementById("code_editor").contentWindow.postMessage(languages.get(language), "*")
 	}
 	
 	function validate(){
