@@ -7,7 +7,7 @@
 		for(i=1; i<=13; i++){
 			let results = localStorage.getItem(i);
 			if(results){
-				addTable(n);
+				addTable(i);
 				for(r in JSON.parse(result)){
 					addRow(i, r.input, r.output, r.result, r.timestamp)
 				}
