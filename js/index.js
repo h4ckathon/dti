@@ -80,7 +80,8 @@
 	  });
 	
 	function resetLanguage(language) {
-		document.getElementById("code_editor").contentWindow.postMessage(languages.get(language), "*")
+		if(confirm('The current code will be lost. Do you wnat to continue?'))
+			document.getElementById("code_editor").contentWindow.postMessage(languages.get(language), "*")
 	}
 	
 	function validate(){
