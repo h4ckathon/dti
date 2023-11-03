@@ -9,7 +9,7 @@
 			if(results){
 				addTable(i);
 				for(r in JSON.parse(results)){
-					addRow(r, results[r].input, results[r].output, results[r].result, results[r].timestamp)
+					addRow(i, results[r].input, results[r].output, results[r].result, results[r].timestamp)
 				}
 				resetSlider();
 			}
