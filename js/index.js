@@ -1,9 +1,33 @@
 {
-
-	window.onload = function(){
-		console.log(localStorage)
-	}
+	var questions, code;
 	var languages = new Map();
+	
+	window.onload = function(){
+		console.log(localStorage);
+		for(i=1; i<=13; i++){
+			let r = localStorage.getItem(i);
+			if(r){
+				addTable(i)
+				addRow(r.response, question, dateStr, n)
+				resetSlider()
+			}
+		}
+	}
+	
+	window.onmessage = function (e) {
+	    if (e.data && e.data.language) {
+		code = e.data; 
+		console.log(code);
+	    }
+	};
+	
+	$.ajax({
+	    url: "https://raw.githubusercontent.com/h4ckathon/dti/master/js/questions.json",
+	    dataType: "json"
+	  }).done(function(result) {
+	    questions = result
+	  });
+
 	$.getScript("./js/languages/javascript.js", () => {languages.set('javascript', javascript)});
 	$.getScript("./js/languages/java.js", () => {languages.set('java', java)});
 	$.getScript("./js/languages/csharp.js", () => {languages.set('csharp', csharp)});
@@ -34,22 +58,7 @@
 		</div>
 	`
 	
-	var questions, code;
 	
-	window.onmessage = function (e) {
-	    if (e.data && e.data.language) {
-		code = e.data; 
-		console.log(code);
-	    }
-	};
-	
-	        
-	$.ajax({
-	    url: "https://raw.githubusercontent.com/h4ckathon/dti/master/js/questions.json",
-	    dataType: "json"
-	  }).done(function(result) {
-	    questions = result
-	  });
 	
 	function resetLanguage(language) {
 		if(confirm('The current code will be lost. Do you wnat to continue?'))
@@ -119,7 +128,7 @@
 			localStorage.setItem(n, JSON.stringify(r));
 			
 			addTable(n)
-			addRow(response, question, dateStr, n)
+			addRow(n, r[i].input, r[i].output, r[i].result, r[i].timestamp)
 			resetSlider()
 		}
 	}
@@ -144,8 +153,8 @@
 		}
 	}
 
-	const addRow = (response, question, date, questionNumber) => {
-		const newRow = row(response.stdin, response.stdout.replace(/\n/,""), response.stdout.replace(/\n/,"")  === question['response'] ? 'Success' : 'Failed', date)
+	const addRow = (questionNumber, stdin, stdout, result, date) => {
+		const newRow = row(stdin, stdout, result, date)
 
 		$(`#table${questionNumber}`).append( newRow )
 	}
