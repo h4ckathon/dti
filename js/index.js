@@ -30,6 +30,9 @@
 	    if (e.data && e.data.language) {
 		code = e.data; 
 		console.log(code);
+	    } else {
+		    console.log("teste");
+		    console.log(e);
 	    }
 	};
 	
