@@ -1,14 +1,41 @@
 {
-	var teste = {
-     eventType: 'populateCode',
-     language: 'python',
-     files: [
-      {
-        "name": "HelloWorld.py",
-        "content": "your code...."
-      }
-  ]
- }
+	var languages = new Map();
+	languages.setItem('javascript',
+		{
+			eventType: 'populateCode',
+			language: 'javascript',
+			     files: [
+			      {
+				"name": "index.js",
+				"content": "your code...."
+			      }
+			  ]
+		}
+	)
+	languages.setItem('csharp',
+		{
+			eventType: 'populateCode',
+			language: 'javascript',
+			     files: [
+			      {
+				"name": "index.js",
+				"content": "your code...."
+			      }
+			  ]
+		}
+	)
+	languages.setItem('java',
+		{
+			eventType: 'populateCode',
+			language: 'javascript',
+			     files: [
+			      {
+				"name": "index.js",
+				"content": "your code...."
+			      }
+			  ]
+		}
+	)
 	
 	var article = (q) =>  `<article style='position: relative; width: 100%; opacity: 1;'> 
 				<div class='slide-text'>
@@ -51,6 +78,10 @@
 	  }).done(function(result) {
 	    questions = result
 	  });
+	
+	function resetLanguage() {
+		document.getElementById("#code_editor").contentWindow.postMessage(code.language, "*")
+	}
 	
 	function validate(){
 		numberOfQuestions = 0;
