@@ -4,7 +4,7 @@ var javascript = {
        files: [
                 {
                   "name": "solution.js",
-                  "content": "let inputReader = require('./inputReader');\r\ninputReader.read(solve);\r\n\r\nfunction solve(){\r\n/* Implementation goes here */\r\n}"
+                  "content": "let inputReader = require('./inputReader');\r\ninputReader.read(solve);\r\n\r\nfunction solve(){\r\n/*   Implementation goes here */\r\n}"
                 },
                 {
                   "name": "inputReader.js",
