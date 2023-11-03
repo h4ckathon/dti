@@ -9,9 +9,9 @@
 				addTable(i);
 				results = JSON.parse(results);
 				for(r in results){
-					
-					console.log(results[r])
-					//addRow(i, results[r].input, results[r].output, results[r].result, results[r].timestamp)
+					if(results[r]){
+						addRow(i, results[r].input, results[r].output, results[r].result, results[r].timestamp)
+					}
 				}
 				resetSlider();
 			}
