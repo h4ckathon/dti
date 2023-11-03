@@ -8,7 +8,7 @@ var python = {
                 },
                 {
                   "name": "input.py",
-                  "content": "import sys\nexec(sys.stdin.readline())"
+                  "content": "#This file should not be changed\nimport sys\nexec(sys.stdin.readline())"
                 }
               ]
 }
