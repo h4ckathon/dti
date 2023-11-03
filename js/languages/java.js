@@ -1,6 +1,6 @@
 var java = {
   eventType: 'populateCode',
-  language: 'javascript',
+  language: 'java',
        files: [
         {
             "name": "main.java",
