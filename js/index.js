@@ -3,14 +3,15 @@
 	var languages = new Map();
 	
 	window.onload = function(){
-		console.log(localStorage);
 		for(i=1; i<=13; i++){
 			let results = localStorage.getItem(i);
 			if(results){
 				addTable(i);
 				results = JSON.parse(results);
 				for(r in results){
-					addRow(i, results[r].input, results[r].output, results[r].result, results[r].timestamp)
+					
+					console.log(results[r])
+					//addRow(i, results[r].input, results[r].output, results[r].result, results[r].timestamp)
 				}
 				resetSlider();
 			}
