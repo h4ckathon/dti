@@ -7,7 +7,7 @@
 		for(i=1; i<=13; i++){
 			let result = localStorage.getItem(i);
 			if(result){
-				r = JSON.parse(r);
+				r = JSON.parse(result);
 				console.log(r)
 			}
 		}
