@@ -5,10 +5,13 @@
 	window.onload = function(){
 		console.log(localStorage);
 		for(i=1; i<=13; i++){
-			let result = localStorage.getItem(i);
-			if(result){
-				r = JSON.parse(result);
-				console.log(r)
+			let results = localStorage.getItem(i);
+			if(results){
+				addTable(n);
+				for(r in JSON.parse(result)){
+					addRow(i, r.input, r.output, r.result, r.timestamp)
+				}
+				resetSlider();
 			}
 		}
 	}
