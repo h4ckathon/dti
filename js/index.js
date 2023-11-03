@@ -1,31 +1,9 @@
 {
 	var languages = new Map();
-	$.getScript("my_lovely_script.js", () => {languages.set('javascript', javascript)});
-	
-	languages.set('csharp',
-		{
-			eventType: 'populateCode',
-			language: 'javascript',
-			     files: [
-			      {
-				"name": "index.js",
-				"content": "your code...."
-			      }
-			  ]
-		}
-	)
-	languages.set('java',
-		{
-			eventType: 'populateCode',
-			language: 'javascript',
-			     files: [
-			      {
-				"name": "index.js",
-				"content": "your code...."
-			      }
-			  ]
-		}
-	)
+	$.getScript("./js/languages/javascript.js", () => {languages.set('javascript', javascript)});
+	$.getScript("./js/languages/java.js", () => {languages.set('java', java)});
+	$.getScript("./js/languages/csharp.js", () => {languages.set('csharp', csharp)});
+	$.getScript("./js/languages/python.js", () => {languages.set('python', python)});
 	
 	var article = (q) =>  `<article style='position: relative; width: 100%; opacity: 1;'> 
 				<div class='slide-text'>
