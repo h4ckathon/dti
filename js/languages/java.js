@@ -4,7 +4,7 @@ var java = {
        files: [
                   {
                       "name": "Main.java",
-                      "content": "import java.util.*;\n\npublic class Main {\n  public static void main(String[] args) {\n      Map<String, Object> input = InputReader.readStdin();\n      solve(input);\n  }\n  \n  public static void solve(Map<String, Object> input){\n/* Implementation goes here */\n  }\n}"
+                      "content": "import java.util.*;\n\npublic class Main {\n  public static void main(String[] args) {\n      Map<String, Object> input = InputReader.readStdin();\n      solve(input);\n  }\n  \n  public static void solve(Map<String, Object> input){\n/*     Implementation goes here */\n  }\n}"
                   },
                   {
                       "name": "InputReader.java",
