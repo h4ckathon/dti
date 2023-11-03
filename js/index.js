@@ -3,6 +3,7 @@
 	var languages = new Map();
 	
 	window.onload = function(){
+		document.getElementById("code_editor").contentWindow.postMessage(languages.get(language), "*");
 		for(i=1; i<=13; i++){
 			let results = localStorage.getItem(i);
 			if(results){
