@@ -1,6 +1,6 @@
 {
 	var languages = new Map();
-	languages.setItem('javascript',
+	languages.set('javascript',
 		{
 			eventType: 'populateCode',
 			language: 'javascript',
@@ -12,7 +12,7 @@
 			  ]
 		}
 	)
-	languages.setItem('csharp',
+	languages.set('csharp',
 		{
 			eventType: 'populateCode',
 			language: 'javascript',
@@ -24,7 +24,7 @@
 			  ]
 		}
 	)
-	languages.setItem('java',
+	languages.set('java',
 		{
 			eventType: 'populateCode',
 			language: 'javascript',
