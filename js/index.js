@@ -8,8 +8,8 @@
 			let results = localStorage.getItem(i);
 			if(results){
 				addTable(i);
-				for(r in JSON.parse(results)){
-					addRow(i, r.input, r.output, r.result, r.timestamp)
+				for(i in JSON.parse(results)){
+					addRow(i, results[i].input, results[i].output, results[i].result, results[i].timestamp)
 				}
 				resetSlider();
 			}
