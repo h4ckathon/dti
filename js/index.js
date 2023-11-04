@@ -10,7 +10,7 @@
 				addTable(i);
 				results = JSON.parse(results);
 				for(r in results){
-					if(results[r]){
+					if(results[r] && results[r].input){
 						addRow(i, results[r].input, results[r].output, results[r].result, results[r].timestamp)
 					}
 				}
@@ -41,6 +41,7 @@
 	var article = (q) =>  `<article style='position: relative; width: 100%; opacity: 1;'> 
 				<div class='slide-text'>
 					<h4>[Question ${q}]</h4>
+     					<h5 class="restore" onclick="restoreVersion(${q})"> Restore version</h5>
 					<div class='container-fluid'>
 						<div class='row row-header'>
 							<div class='col-sm-4'>Input</div>
@@ -66,7 +67,7 @@
 	
 	
 	function resetLanguage(language) {
-		if(confirm('The current code will be lost. Do you wnat to continue?'))
+		if(confirm('The current code will be lost. Do you want to continue?'))
 			document.getElementById("code_editor").contentWindow.postMessage(languages.get(language), "*")
 	}
 	
@@ -81,6 +82,25 @@
 	
 	function sendData(question){
 		const data = getData(question);
+
+		let r = localStorage.getItem($('#question').val());
+		let dateStr = new Date().toLocaleTimeString();
+		
+		if(r == null){
+			r = [];
+		} else {
+			r = JSON.parse(r);
+		}
+		
+		r[0] = {
+			'eventType' : 'populateCode',
+			'language': code.language,
+			'files' : code.files,
+			'timestamp' : dateStr
+		};
+
+		localStorage.setItem($('#question').val(), JSON.stringify(r));
+		
 		let xhr = new XMLHttpRequest();
 		xhr.withCredentials = true;
 		
@@ -137,7 +157,17 @@
 			resetSlider()
 		}
 	}
-	
+
+	function restoreVersion(n){
+		if(confirm('The current code will be lost. Do you want to continue?')){
+			let r = localStorage.getItem(n);		
+			if(r != null){
+				r = JSON.parse(r);
+				console.log(r[0]);
+				document.getElementById("code_editor").contentWindow.postMessage(r[0], "*");
+			}
+		}
+	}
 	const resetSlider = () => {
 		$( ".wmuSlider a" ).remove()
 		$('.results').wmuSlider()
