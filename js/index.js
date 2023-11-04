@@ -67,7 +67,7 @@
 	
 	
 	function resetLanguage(language) {
-		if(confirm('The current code will be lost. Do you wnat to continue?'))
+		if(confirm('The current code will be lost. Do you want to continue?'))
 			document.getElementById("code_editor").contentWindow.postMessage(languages.get(language), "*")
 	}
 	
@@ -83,7 +83,7 @@
 	function sendData(question){
 		const data = getData(question);
 
-		let r = localStorage.getItem(question);
+		let r = localStorage.getItem($('#question').val());
 		let dateStr = new Date().toLocaleTimeString();
 		
 		if(r == null){
@@ -99,7 +99,7 @@
 			'timestamp' : dateStr
 		};
 
-		localStorage.setItem(question, JSON.stringify(r));
+		localStorage.setItem($('#question').val(), JSON.stringify(r));
 		
 		let xhr = new XMLHttpRequest();
 		xhr.withCredentials = true;
@@ -157,7 +157,17 @@
 			resetSlider()
 		}
 	}
-	
+
+	function restoreVersion(n){
+		if(confirm('The current code will be lost. Do you want to continue?')){
+			let r = localStorage.getItem(n);		
+			if(r != null){
+				r = JSON.parse(r);
+				console.log(r[0]);
+				document.getElementById("code_editor").contentWindow.postMessage(r[0], "*");
+			}
+		}
+	}
 	const resetSlider = () => {
 		$( ".wmuSlider a" ).remove()
 		$('.results').wmuSlider()
