@@ -10,7 +10,7 @@
 				addTable(i);
 				results = JSON.parse(results);
 				for(r in results){
-					if(results[r]){
+					if(results[r] && results[r].input){
 						addRow(i, results[r].input, results[r].output, results[r].result, results[r].timestamp)
 					}
 				}
@@ -82,6 +82,25 @@
 	
 	function sendData(question){
 		const data = getData(question);
+
+		let r = localStorage.getItem(question);
+		let dateStr = new Date().toLocaleTimeString();
+		
+		if(r == null){
+			r = [];
+		} else {
+			r = JSON.parse(r);
+		}
+		
+		r[0] = {
+			'eventType' : 'populateCode',
+			'language': code.language,
+			'files' : code.files,
+			'timestamp' : dateStr
+		};
+
+		localStorage.setItem(question, JSON.stringify(r));
+		
 		let xhr = new XMLHttpRequest();
 		xhr.withCredentials = true;
 		
