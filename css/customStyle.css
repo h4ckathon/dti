@@ -34,3 +34,11 @@ opacity: .8;
     font-size: 1.5em;
     color: white;
 }
+
+.restore {
+    display: inline;
+    cursor: pointer;
+}
+.restore:hover {
+    color: antiquewhite;
+}
