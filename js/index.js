@@ -41,6 +41,7 @@
 	var article = (q) =>  `<article style='position: relative; width: 100%; opacity: 1;'> 
 				<div class='slide-text'>
 					<h4>[Question ${q}]</h4>
+     					<h5 class="restore" onclick="restoreVersion(${q})"> Restore version</h5>
 					<div class='container-fluid'>
 						<div class='row row-header'>
 							<div class='col-sm-4'>Input</div>
