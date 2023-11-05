@@ -4,7 +4,7 @@ var javascript = {
        files: [
                   {
                       "name": "solution.js",
-                      "content": "let inputReader = require('./inputReader');\r\ninputReader.read(solve);\r\n/* Do not change the code above */\r\n\r\nfunction solve(){\r\n  /* \r\n    Implementation goes here! \r\n    STDIN variables should be accessible by their own names;\r\n    For instance, the following input for the program:\r\n      s = \"Hello Wordl\"\r\n    and the code below:\r\n      console.log(s);\r\n    will print \"Hello World\" in the Output!\r\n  */\r\n}"
+                      "content": "let inputReader = require('./inputReader');\r\ninputReader.read(solve);\r\n/* Do not change the code above */\r\n\r\n/*\r\n  STDIN variables should be accessible by their own names;\r\n  For instance, the following input for the program:\r\n    s = \"Hello Wordl\"\r\n  and the code below:\r\n    console.log(s);\r\n  will print \"Hello World\" in the Output!\r\n*/\r\nfunction solve(){\r\n  /* Implementation goes here! */\r\n}"
                   },
                   {
                       "name": "inputReader.js",
