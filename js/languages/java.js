@@ -4,7 +4,7 @@ var java = {
        files: [
                   {
                       "name": "Main.java",
-                      "content": "import java.util.*;\n\npublic class Main {\n  public static void main(String[] args) {\n      Map<String, Object> input = InputReader.readStdin();\n      solve(input);\n  }\n  \n  /*\n    Use input.get(\"var_name\") to retrieve input variables\n    The variables can be one of the following classes:\n      String, Integer or Integer[]\n    For instance, the following input for the program:\n        s = \"Hello, World!\"\n    and the code below:\n      System.out.println((String) input.get(\"s\"));\n    will print \"Hello, World!\" in the Output!\n  */\n  public static void solve(Map<String, Object> input){\n    /* Implementation goes here!!! */\n  }\n}"
+                      "content": "import java.util.*;\n\npublic class Main {\n  public static void main(String[] args) {\n      Map<String, Object> input = InputReader.readStdin();\n      solve(input);\n  }\n  \n  /*\n    Use input.get(\"var_name\") to retrieve input variables\n    The variables can be one of the following classes:\n      String, Integer or Integer[]\n    For instance, the following input for the program:\n        s = \"Hello, World!\"\n    and the code below:\n      System.out.println((String) input.get(\"s\"));\n    will print \"Hello, World!\" in the Output!\n  */\n  public static void solve(Map<String, Object> input){\n    /* Implementation goes here! */\n  }\n}"
                   },
                   {
                       "name": "InputReader.java",
