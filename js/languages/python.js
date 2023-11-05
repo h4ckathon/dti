@@ -4,7 +4,7 @@ var python = {
        files: [
                   {
                       "name": "main.py",
-                      "content": "import sys\nimport input\n\n# STDIN variables should be accessible by input.var_name\n# For instance, the following input for the program\n#   s = \"Hello World\"\n# and the code below:\n#   print(input.s)\n# will print \"Hello World\" in the Output!\n#\n# Implementation goes here!\n"
+                      "content": "import sys\nimport input\n\n# STDIN variables should be accessible by input.var_name\n# For instance, the following input for the program\n#   s = \"Hello, World!\"\n# and the code below:\n#   print(input.s)\n# will print \"Hello, World!\" in the Output!\n# \n# Implementation goes here!\n"
                   },
                   {
                       "name": "input.py",
