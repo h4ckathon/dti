@@ -1,19 +1,23 @@
 {
      "1": [{
-           "input":  "s = \"Olá mundo\"",
-           "response": "5"
+           "input":  "n = 1",
+           "response": "true"
            },
            {
-           "input":  "s = \"  Bora     Bill   \"",
-           "response": "4"
+           "input":  "n=16",
+           "response": "true"
            },
            {
-           "input":  "s = \"Ele é o Super-Homem\"",
-           "response": "11"
+           "input":  "n = 24",
+           "response": "false"
            },
            {
-           "input":  "s = \"  \"",
-           "response": "0"
+           "input":  "n = 3",
+           "response": "false"
+           },
+          {
+           "input":  "n = 128",
+           "response": "true"
            } ],
      "2": [{
            "input":  "n = 19",
